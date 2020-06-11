@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gym</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        
+        <meta charset="utf-8">
+        <meta name="language" content="IT">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <div id="background-image"></div>
+
+        <span id="title">Gym &#128170</span>
+
+        <div id="div-form">
+                <div id="error-message"><b style="padding-right: 3px">Attenzione!</b> Compilare tutti i campi.</div>
+
+                <div>
+                    <label for="time" class="label-class">Timer</label>
+                    <input type="number" id="time" class="input-class" name="time" placeholder="Timer">
+                </div>
+
+                <div>
+                    <label for="repeat" class="label-class">Repeat</label>
+                    <input type="number" id="repeat" class="input-class" name="repeat" placeholder="Repeat timer">
+                </div>
+                
+                <div>
+                    <input type="submit" id="submit" class="input-class" name="submit" value="Invia">
+                </div>
+        </div>
+
+        <div id="popup-timer">
+            <div id="popup-number"></div>
+            <input id="popup-stop" type="submit" name="popup-stop" value="Stop">
+        </div>
+        
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html> 
