@@ -1,4 +1,4 @@
-function startTimer(y, timeValue)
+/* function startTimer(y, timeValue)
 {
     if(y<=timeValue)
     {
@@ -56,7 +56,7 @@ function anotherTimer(x, repeatValue, y, timeValue)
         y=1;
         x++;
     }
-}
+} */
 
 /* if(counter < 10)
     {
@@ -100,16 +100,16 @@ document.getElementById("submit").onclick = function()
         document.getElementById("popup-timer").style.display = "block";
 
         /* Timer */
-        while (x<repeatValue)
-        {
-            startTimer(y, timeValue);
-            x++;
-            y=1;
-        }
+        
     }  
 }   //Fine funzione
 
 document.getElementById("popup-stop").onclick = function()
 {
     document.getElementById("popup-timer").style.display = "none";
+}
+
+document.getElementById("navbar-login").onclick = function ()
+{
+    document.getElementById("").style.display = "none";
 }

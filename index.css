@@ -45,6 +45,7 @@ html {
     color: white;
     text-align: right;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #background-image {
