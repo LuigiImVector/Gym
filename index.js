@@ -109,7 +109,7 @@ document.getElementById("popup-stop").onclick = function()
     document.getElementById("popup-timer").style.display = "none";
 }
 
-document.getElementById("navbar-login").onclick = function ()
+/* document.getElementById("navbar-login").onclick = function ()
 {
     document.getElementById("").style.display = "none";
-}
+} */

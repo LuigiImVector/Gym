@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Gym</title>
-        <link rel="stylesheet" type="text/css" href="login.css">
+        <!-- <link rel="stylesheet" type="text/css" href="login.css"> -->
         
         <meta charset="utf-8">
         <meta name="language" content="IT">
@@ -16,7 +16,11 @@
     <body>
 
         <form action="index.php" id="form" method="POST">
-            <div id="error-message"><b style="padding-right: 3px">Attenzione!</b> Compilare tutti i campi.</div>
+            <div id="error-message">
+                <?php
+                    echo $error;
+                ?>
+            </div>
 
             <div>
                 <label for="email" class="label-class">Email</label>
@@ -39,6 +43,6 @@
         </form> 
 
 
-        <script type="text/javascript" src="index.js"></script>
+        <!-- <script type="text/javascript" src="index.js"></script> -->
     </body>
 </html>
