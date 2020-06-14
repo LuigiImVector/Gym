@@ -2,6 +2,13 @@
 
     $error = "";
 
+    $db = mysqli_connect("localhost", "root", "", "gymDatabase");
+
+    if(mysqli_connect_error())
+    {
+        die("Si è verificato un errore, riprovare più tardi.");
+    }
+
     if(isset($_POST['submit']))
     {
         $email = $_POST['email'];
@@ -30,10 +37,39 @@
             $error .= "Le password non sono uguali</br>"; /* Frase da migliorare */
         }
 
+        $query = "SELECT `email` FROM gymDatabase WHERE id='"".mysqli_real_escape_string($db, $email).""'";
+        $result = mysqli_query($db, $query);
+
+        if (mysqli_num_rows($result)>0)
+        {
+            $error .= "L\'EMail inserita è già stata utilizzata, inserirne un\'altra.</br>"
+        }
+
+/* Validazione password */
+        if (strlen($password) < 12)
+        {
+            $error .= "La password deve avere almeno 12 caratteri.";
+        } else if (strlen($password) > 256)    /* Non so se usare il 'maggiore' oppure il 'maggiore-uguale' */
+        {
+            $error .= "La password deve avere meno di 256 caratteri."; /* Non sono sicuro che ci sia un limite di lunghezza */
+        } else if (!preg_match("#[0-9]+#", $password))
+        {
+            $error .= "La password deve contenere almeno ..."; /* Ultimare */
+        } else if (!preg_match("#[A-Z]+#", $password))
+        {
+            $error .= "La password deve contenere almeno ..."; /* Ultimare */
+        } else if (!preg_match("#[a-z]+#", $password))
+        {
+            $error .= "La password deve contenere almeno ..."; /* Ultimare */
+        } else if(!preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password)) /* Ultimare */
+        {
+            $error .= "La password deve contenere almeno ..."; /* Ultimare */
+        }
+
         /* Inizio sessione */
         if ($error == "")
         {
-
+            
         }
     }
     
