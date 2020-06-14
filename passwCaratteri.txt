@@ -8,4 +8,6 @@ Numeri:
 0123456789
 
 Caratteri speciali:
-!"$%&/()=?'^_-.;,:@#*+[]
+!"$%&/=?'^_-.;,:@#*+[]
+
+(Da aggiungere '()')
