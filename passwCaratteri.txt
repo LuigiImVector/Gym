@@ -1,0 +1,11 @@
+Caratteri minuscoli:
+qwertyuiopasdfghjklzxcvbnm
+
+Caratteri maiuscoli:
+QWERTYUIOPASDFGHJKLZXCVBNM
+
+Numeri:
+0123456789
+
+Caratteri speciali:
+!"$%&/()=?'^_-.;,:@#*+[]
