@@ -70,9 +70,20 @@
 /* Inizio sessione */
         if ($error == "")
         {
-            $query = "INSERT INTO gymUsers (email, password) VALUES ('$email', '$password')";
+            $query = "INSERT INTO gymUsers (email, password) VALUES ('".mysqli_real_escape_string($db, $email)."', '')";
             mysqli_query($db, $query);
             
+            $query = "SELECT id FROM gymUsers WHERE email=('$email')";
+            $result = mysqli_query($db, $query);
+            $row = mysqli_fetch_assoc($result);
+            $salt = $row['id'];
+            /*
+            echo $salt;     -- Serve per testare
+            */
+
+            $hashedPassword = hash('sha256', $password . hash('sha256', $salt));
+            $query = "UPDATE gymUsers SET password='".mysqli_real_escape_string($db, $hashedPassword)."' WHERE email='".mysqli_real_escape_string($db, $email)."'";
+            mysqli_query($db, $query);
         }
     }
     
