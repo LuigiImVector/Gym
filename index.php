@@ -70,12 +70,8 @@
 /* Inizio sessione */
         if ($error == "")
         {
-            $query = "INSERT INTO `gymUsers` (`id`, `email`, `password`) VALUES (NULL, $email, $password)";
+            $query = "INSERT INTO gymUsers (email, password) VALUES ('$email', '$password')";
             mysqli_query($db, $query);
-            if(mysqli_query($db, $query))
-            {
-                echo "Ciao";
-            }
             
         }
     }
