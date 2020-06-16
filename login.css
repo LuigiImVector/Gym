@@ -32,6 +32,10 @@ body {
     border: 0.5px solid #ff0000b8;
     border-radius: 5px;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    /*
+    font-family: 'Courier New', Courier, monospace;     --Font alternativo
+    */
     margin:0px auto;
     margin-bottom: 30px;
     z-index: 4;
