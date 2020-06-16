@@ -17,7 +17,7 @@
         $confirmPassword = $_POST['confirm-password'];
         /* $checkbox = $_POST['checkbox']; */
       
-        /* Analisi dati ricevuti */
+/* Analisi dati ricevuti */
         if (!$_POST['email'])
         {
             $error .= "Inserire una EMail</br>";
@@ -38,12 +38,12 @@
             $error .= "Le password non sono uguali</br>"; /* Frase da migliorare */
         }
 
-        $query = "SELECT `email` FROM `gymDatabase` WHERE email='".mysqli_real_escape_string($db, $email)."'";
+        $query = "SELECT `email` FROM `gymUsers` WHERE email='".mysqli_real_escape_string($db, $email)."'";
         $result = mysqli_query($db, $query);
 
         if (mysqli_num_rows($result)>0)
         {
-            $error .= "L\'EMail inserita è già stata utilizzata, inserirne un\'altra.</br>";
+            $error .= "L'EMail inserita è già stata utilizzata, inserirne un'altra.</br>";
         }
 
 /* Validazione password */
@@ -67,10 +67,10 @@
             $error .= "La password deve avere meno di 65535 caratteri.";
         }
 
-        /* Inizio sessione */
+/* Inizio sessione */
         if ($error == "")
         {
-            $query = "INSERT INTO `gymDatabase` (`id`, `email`, `password`) VALUES (NULL, $email, $password)";
+            $query = "INSERT INTO `gymUsers` (`id`, `email`, `password`) VALUES (NULL, $email, $password)";
             mysqli_query($db, $query);
             if(mysqli_query($db, $query))
             {
