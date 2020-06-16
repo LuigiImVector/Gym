@@ -11,10 +11,13 @@
 
     if(isset($_POST['submit']))
     {
+        
         $email = $_POST['email'];
         $password = $_POST['password'];
         $confirmPassword = $_POST['confirm-password'];
         /* $checkbox = $_POST['checkbox']; */
+        $query = "INSERT INTO `gymUsers`(email) VALUES ('".mysqli_real_escape_string($db, $email)."') LIMIT 1";
+        mysqli_query($db, $query);
       
         /* Analisi dati ricevuti */
         if (!$_POST['email'])
@@ -37,13 +40,13 @@
             $error .= "Le password non sono uguali</br>"; /* Frase da migliorare */
         }
 
-        /* $query = "SELECT `email` FROM gymDatabase WHERE email='".mysqli_real_escape_string($db, $email)."'";
+        $query = "SELECT `email` FROM gymUsers WHERE email='".mysqli_real_escape_string($db, $email)."'";
         $result = mysqli_query($db, $query);
 
         if (mysqli_num_rows($result)>0)
         {
             $error .= "L\'EMail inserita è già stata utilizzata, inserirne un\'altra.</br>";
-        } */
+        }
 
 /* Validazione password */
         if (strlen($password) < 12)
@@ -69,16 +72,21 @@
         /* Inizio sessione */
         if ($error == "")
         {
-            $query = "INSERT INTO gymDatabase(email) VALUES ('".mysqli_real_escape_string($db, $email)."') LIMIT 1";
+            $query = "INSERT INTO gymUsers(email) VALUES ('".mysqli_real_escape_string($db, $email)."') LIMIT 1";
             mysqli_query($db, $query);
 
-            $query = "SELECT id FROM gymDatabase WHERE email='".mysqli_real_escape_string($db, $email)."'";
+            $query = "SELECT id FROM gymUsers WHERE email='".mysqli_real_escape_string($db, $email)."'";
             $result = mysqli_query($db, $query);
-            /* $row = mysqli_fetch_assoc($result); */
-            $salt = $row['$result'];
-            echo $result;
+            $row = mysqli_fetch_assoc($result);
+            /*$salt = $row['$id']; */
+            echo $row;
 
-            $password = hash('sha256', $password . $salt);
+/*             $test = mysqli_insert_id();
+            echo $test; */
+
+            
+
+            /* $password = hash('sha256', $password . $salt); */
         }
     }
     
