@@ -23,7 +23,7 @@ body {
 }
 
 #error-message {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 500px;
