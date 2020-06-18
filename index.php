@@ -88,7 +88,19 @@
     }
     
     include("login.html");
-?> 
+?>
 
+<!-- <script type="text/javascript">
+    var javaScriptError = '<?php echo $error; ?>';
+
+document.getElementById("submit").onclick = function ()
+{
+    if (javaScriptError=="")
+    {
+        document.getElementById("error-message").style.display = "flex";
+    }
+}
+
+</script> -->
 
 <!-- WikiHow: Come suicidarsi -->
