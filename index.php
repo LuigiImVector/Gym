@@ -81,7 +81,7 @@
             echo $salt;     -- Serve per testare
             */
 
-            $hashedPassword = hash('sha256', $password . hash('sha256', $salt));
+            $hashedPassword = hash('sha256', $salt . $password . hash('sha256', $salt));
             $query = "UPDATE gymUsers SET password='".mysqli_real_escape_string($db, $hashedPassword)."' WHERE email='".mysqli_real_escape_string($db, $email)."'";
             mysqli_query($db, $query);
 
