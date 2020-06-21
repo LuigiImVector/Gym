@@ -15,7 +15,7 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
         $confirmPassword = $_POST['confirm-password'];
-        /* $checkbox = $_POST['checkbox']; */
+        $checkbox = $_POST['checkbox'];
       
 /* Analisi dati ricevuti */
         if (!$_POST['email'])
@@ -84,6 +84,14 @@
             $hashedPassword = hash('sha256', $password . hash('sha256', $salt));
             $query = "UPDATE gymUsers SET password='".mysqli_real_escape_string($db, $hashedPassword)."' WHERE email='".mysqli_real_escape_string($db, $email)."'";
             mysqli_query($db, $query);
+
+            session_start();
+            if ($checkbox == "true")
+            {
+                setCookie("gymCookie", "", time() + 60*60*24*30, "/", "", "TRUE", "TRUE");
+            } else {
+                
+            }
         }
     }
     
