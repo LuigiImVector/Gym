@@ -86,11 +86,9 @@
             mysqli_query($db, $query);
 
             session_start();
-            if ($checkbox == "true")
+            if ($checkbox == "1")
             {
                 setCookie("gymCookie", "", time() + 60*60*24*30, "/", "", "TRUE", "TRUE");
-            } else {
-                
             }
         }
     }
