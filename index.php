@@ -11,9 +11,9 @@
 
     include("register.php");
 
-    include("login.php");
+    /* include("login.php"); */
     
-    include("login.html");
+    include("register.html");
 ?>
 
 <!-- <script type="text/javascript">

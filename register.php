@@ -48,7 +48,7 @@ if(isset($_POST['submit']))
     } else if (!preg_match("#[a-z]+#", $password))
     {
         $error .= "La password deve contenere almeno un carattere minuscolo.";
-    } else if (!preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password))    /* Testare le alternative [\W] */
+    } else if (!preg_match('#[\W]+#', $password))
     {
         $error .= "La password deve contenere almeno un carattere speciale.";
     } else if (strlen($password) > 65535)
