@@ -9,22 +9,22 @@ if(isset($_POST['submit']))
 /* Analisi dati ricevuti */
     if (!$_POST['email'])
     {
-        $error .= "Inserire una EMail</br>";
+        $error .= "Inserire una EMail.</br>";
     }
 
     if ($password == "")
     {
-        $error .= "Inserire una password</br>";
+        $error .= "Inserire una password.</br>";
     }
 
     if ($confirmPassword == "")
     {
-        $error .= "Inserire la conferma della password</br>"; /* Fa schifo come frase -- Da cambiare */
+        $error .= "Inserire la conferma della password.</br>"; /* Frase da migliorare */
     }
 
     if ($password != $confirmPassword)
     {
-        $error .= "Le password non sono uguali</br>"; /* Frase da migliorare */
+        $error .= "Le password non sono uguali.</br>";
     }
 
     $query = "SELECT `email` FROM `gymUsers` WHERE email='".mysqli_real_escape_string($db, $email)."'";
@@ -38,22 +38,22 @@ if(isset($_POST['submit']))
 /* Validazione password */
     if (strlen($password) < 12)
     {
-        $error .= "La password deve avere almeno 12 caratteri.";
+        $error .= "La password deve avere almeno 12 caratteri.</br>";
     } else if (!preg_match("#[0-9]+#", $password))
     {
-        $error .= "La password deve contenere almeno un numero.";
+        $error .= "La password deve contenere almeno un numero.</br>";
     } else if (!preg_match("#[A-Z]+#", $password))
     {
-        $error .= "La password deve contenere almeno un carattere maiuscolo.";
+        $error .= "La password deve contenere almeno un carattere maiuscolo.</br>";
     } else if (!preg_match("#[a-z]+#", $password))
     {
-        $error .= "La password deve contenere almeno un carattere minuscolo.";
+        $error .= "La password deve contenere almeno un carattere minuscolo.</br>";
     } else if (!preg_match('#[\W]+#', $password))
     {
-        $error .= "La password deve contenere almeno un carattere speciale.";
+        $error .= "La password deve contenere almeno un carattere speciale.</br>";
     } else if (strlen($password) > 65535)
     {
-        $error .= "La password deve avere meno di 65535 caratteri.";
+        $error .= "La password deve avere meno di 65535 caratteri.</br>";
     }
 
 /* Inizio sessione */
@@ -74,10 +74,10 @@ if(isset($_POST['submit']))
         $query = "UPDATE gymUsers SET password='".mysqli_real_escape_string($db, $hashedPassword)."' WHERE email='".mysqli_real_escape_string($db, $email)."'";
         mysqli_query($db, $query);
 
-        session_start();
+        session_start();    /* L'ID serve? */
         if ($checkbox == "1")
         {
-            setCookie("gymCookie", "", time() + 60*60*24*30, "/", "", "TRUE", "TRUE");
+            setCookie("gymCookie", "", time() + 60*60*24*30, "/", "", "TRUE", "TRUE");  /* L'ID serve? */
         }
     }
 }
