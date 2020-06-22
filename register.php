@@ -27,7 +27,7 @@ if(isset($_POST['submit']))
         $error .= "Le password non sono uguali.</br>";
     }
 
-    $query = "SELECT `email` FROM `gymUsers` WHERE email='".mysqli_real_escape_string($db, $email)."'";
+    $query = "SELECT `email` FROM `gymUsers` WHERE email=('".mysqli_real_escape_string($db, $email)."')";
     $result = mysqli_query($db, $query);
 
     if (mysqli_num_rows($result)>0)
@@ -62,7 +62,7 @@ if(isset($_POST['submit']))
         $query = "INSERT INTO gymUsers (email, password) VALUES ('".mysqli_real_escape_string($db, $email)."', '')";
         mysqli_query($db, $query);
         
-        $query = "SELECT id FROM gymUsers WHERE email=('$email')";
+        $query = "SELECT id FROM gymUsers WHERE email=('".mysqli_real_escape_string($db, $email)."')";
         $result = mysqli_query($db, $query);
         $row = mysqli_fetch_assoc($result);
         $salt = $row['id'];
@@ -71,7 +71,7 @@ if(isset($_POST['submit']))
         */
 
         $hashedPassword = hash('sha256', $salt . $password . hash('sha256', $salt));
-        $query = "UPDATE gymUsers SET password='".mysqli_real_escape_string($db, $hashedPassword)."' WHERE email='".mysqli_real_escape_string($db, $email)."'";
+        $query = "UPDATE gymUsers SET password='".mysqli_real_escape_string($db, $hashedPassword)."' WHERE email=('".mysqli_real_escape_string($db, $email)."')";
         mysqli_query($db, $query);
 
         session_start();    /* L'ID serve? */
