@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gym</title>
+        <link rel="stylesheet" type="text/css" href="register.css">
+        
+        <meta charset="utf-8">
+        <meta name="language" content="IT">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id="div-form">
+            <div id="error-message">
+                <?php
+                    echo $error;
+                ?>
+            </div>
+
+            <form action="index.php" id="form" method="POST">
+                <div>
+                    <label for="email" class="label-class">Email</label>
+                    <input type="email" id="email" class="input-class" name="email">
+                </div>
+
+                <div>
+                    <label for="password" class="label-class">Password</label>
+                    <input type="password" id="password" class="input-class" name="password">
+                </div>
+
+                <div id="div-checkbox">
+                    <input name="checkbox" value="0" type="hidden">
+                    <input type="checkbox" style="margin: 0px;" id="checkbox" name="checkbox" value="0">
+                    <label for="checkbox">Resta collegato</label>
+                </div>
+
+                <div>
+                    <input type="submit" id="submit" class="input-class" name="submit" value="Invia">
+                </div>
+            </form>
+        </div>
+
+        <script type="text/javascript" src="register.js"></script>
+    </body>
+</html>
  
