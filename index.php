@@ -10,6 +10,8 @@
     }
 
     include("register.php");
+
+    include("login.php");
     
     include("login.html");
 ?>
