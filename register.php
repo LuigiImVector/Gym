@@ -79,6 +79,9 @@ if(isset($_POST['submit']))
         {
             setCookie("gymCookie", "", time() + 60*60*24*30, "/", "", "TRUE", "TRUE");  /* L'ID serve? */
         }
+    } else if ($error != "")
+    {
+        $error = '<div id="error-message">' . $error . '</div>';
     }
 }
 
