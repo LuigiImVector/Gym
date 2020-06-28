@@ -1,4 +1,4 @@
-<?php
+<!-- <?php -->
 if(isset($_POST['submit']))
 {   
     $email = $_POST['email'];
@@ -46,8 +46,11 @@ if(isset($_POST['submit']))
         {
             setCookie("gymCookie", "", time() + 60*60*24*30, "/", "", "TRUE", "TRUE");  /* L'ID serve? */
         }
+    } else if ($error != "")
+    {
+        $error = '<div id="error-message">' . $error . '</div>';
     }
 }
 
 
-?> 
+/* ?>  */
