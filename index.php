@@ -12,7 +12,7 @@
     include("index.html");
     
     include("login.php");
-    include("register.php");
+    /* include("register.php"); */
 ?>
 
 <!-- WikiHow: Come suicidarsi -->
