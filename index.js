@@ -109,6 +109,12 @@ document.getElementById("popup-stop").onclick = function()
     document.getElementById("popup-timer").style.display = "none";
 }
 
+document.getElementById("navbar-login").onclick = function ()
+{
+    document.getElementById("div-form").style.display = "none";
+    document.getElementById("secondPage").style.display = "flex";
+}
+
 /* document.getElementById("navbar-login").onclick = function ()
 {
     document.getElementById("").style.display = "none";

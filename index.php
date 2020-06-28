@@ -9,24 +9,10 @@
         die("Si è verificato un errore, riprovare più tardi.");
     }
 
-    include("register.php");
-
-    /* include("login.php"); */
+    include("index.html");
     
-    include("register.html");
+    include("login.php");
+    include("register.php");
 ?>
-
-<!-- <script type="text/javascript">
-    var javaScriptError = '<?php echo $error; ?>';
-
-document.getElementById("submit").onclick = function ()
-{
-    if (javaScriptError=="")
-    {
-        document.getElementById("error-message").style.display = "flex";
-    }
-}
-
-</script> -->
 
 <!-- WikiHow: Come suicidarsi -->
