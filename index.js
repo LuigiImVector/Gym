@@ -114,6 +114,13 @@ document.getElementById("navbar-login").onclick = function ()
     document.getElementById("div-form").style.display = "none";
     document.getElementById("secondPage").style.display = "flex";
 }
+/* 
+document.getElementById("navbar-title").onclick = function ()
+{
+    document.getElementById("secondPage").style.display = "none";
+    document.getElementById("thirdPage").style.display = "none";
+    document.getElementById("div-form").style.display = "flex";
+} */
 
 /* document.getElementById("navbar-login").onclick = function ()
 {
