@@ -11,3 +11,5 @@ Caratteri speciali:
 !"$%&/=?'^_-.;,:@#*+[]
 
 (Da aggiungere '()')
+
+-Test
