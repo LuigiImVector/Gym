@@ -1,4 +1,4 @@
-body, html {
+body, html { /* index.css */
     width: 100%;
     height: 100%;
     margin: 0;
@@ -6,7 +6,7 @@ body, html {
     background-color: black;
 }
 
-html {
+html { /* index.css */
     background: url(gym-background.jpg);
     max-width: 100%;
     background-position: center;
@@ -14,46 +14,12 @@ html {
     background-size: cover;
 }
 
-body {
+body { /* index.css */
     display: flex;
     /* background: #000; */
 }
 
-.noPosition {
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-    top: 0px;
-}
-
-#navbar {
-    height: 45px;
-    width: 100%;
-    position: absolute;
-}
-
-#navbar-title {
-    font-size: 28px;
-    font-family: 'Quicksand', sans-serif;
-    margin: 5px 0px 0px 12px;
-    position: absolute;
-    z-index: 2;
-    color: white;
-}
-
-#navbar-login {
-    font-size: 28px;
-    font-family: 'Quicksand', sans-serif;
-    margin: 5px 12px 0px 0px;
-    position: absolute;
-    z-index: 2;
-    color: white;
-    text-align: right;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#background-image {
+#background-image { /* index.css FORSE */
     background: url(gym-background.jpg);
     max-width: 100%;
     height: 100%;
@@ -67,7 +33,41 @@ body {
 }
 
 
-#timer-form{
+.noPosition { /* index.css */
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+#navbar { /* index.css */
+    height: 45px;
+    width: 100%;
+    position: absolute;
+}
+
+#navbar-title { /* index.css */
+    font-size: 28px;
+    font-family: 'Quicksand', sans-serif;
+    margin: 5px 0px 0px 12px;
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#navbar-login { /* index.css */
+    font-size: 28px;
+    font-family: 'Quicksand', sans-serif;
+    margin: 5px 12px 0px 0px;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: right;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#timer-form{ 
     display: block;
     align-items: center;    
     text-align: center;
@@ -75,8 +75,8 @@ body {
     z-index: 2;
 }
 
-#error-message {
-    display: none; /* Flex */
+#timer-error-message {
+    display: none !important; /* Flex */
     justify-content: center;
     align-items: center;
     width: 500px;
@@ -90,7 +90,7 @@ body {
     z-index: 4;
 }
 
-.label-class {
+.timer-label-class {
     display: block;
     margin-bottom: 25px;
     font-size: 18px;
@@ -100,7 +100,7 @@ body {
     /* text-shadow: 1px 3px #0b0b0b; */
 }
 
-.input-class {
+.timer-input-class {
     margin-bottom: 25px;
     height: 53px;
     width: 348px;
