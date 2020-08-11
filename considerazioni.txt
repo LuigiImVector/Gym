@@ -1,0 +1,16 @@
+    ToDo
+
++Cicli esercizi
++Tempo di riposo
++Pulsante-testo 'Funzioni aggiuntive'//'Altro'
++Cambiare metodo per registrarsi/entrare, quello attuale fa pena, si confonde con il timer
++Finire metodo Login
++Autenticandosi si verrà portati in una pagina in cui sarà possibile scrivere qualsiasi cosa si voglia.
++Creare pannello di controllo [Dopo la versione 1.0]
+
+-
+
+Considerazioni
+
+Non mi piace molto la grafica in generale el sito, o meglio, ci sta però devo modificare quella del login/register, si confonde troppo.
+Credo che questa sia la versione 0.8, appena avrò finito di ultimare un paio di cose e aver fatto funzionare il timer allora potrò "rilasciare" la versione 1.0.
