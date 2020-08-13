@@ -2,11 +2,13 @@ document.getElementById("timer-submit").onclick = function()
 {
     var timeValue = document.getElementById("time").value;
     var repeatValue = document.getElementById("repeat").value;
+    var relaxValue = document.getElementById("relax").value;
     var threeSec = new Audio('audio/countdown-3sec.mp3');
     var x = 0;
     var y = 0;
     var counterPreTimer = 3;
     var preTimerCheck = false;
+    var relaxCheck = false;
     var error = false;
 
     if (timeValue == "")
@@ -27,7 +29,8 @@ document.getElementById("timer-submit").onclick = function()
 
         /* Timer */
       
-        var interval = setInterval(function () {
+        var interval = setInterval(function ()
+        {
 
             /* PreTimer */
             if (preTimerCheck == false)
@@ -52,32 +55,43 @@ document.getElementById("timer-submit").onclick = function()
             }
 
 
-            /* Timer effettivo */
+            /* Timer effettivo + Pausa*/
             else if (preTimerCheck == true)
             {
+
+                if (relaxCheck == false)
+                {
                 
-                if(x==(timeValue-3))
-                {
-                    threeSec.play();
-                }
+                    if(x==(timeValue-3))
+                    {
+                        threeSec.play();
+                    }
 
-                document.getElementById("popup-number").innerHTML = x;
-
-                if(x>timeValue)
-                {
-                    x=0;
                     document.getElementById("popup-number").innerHTML = x;
-                    y++;
-                }
 
-                if (y==repeatValue)
-                {                
-                    clearInterval(interval);
+                    if(x>timeValue)
+                    {
+                        x=0;
+                        document.getElementById("popup-number").innerHTML = x;
+                        relaxCheck=true;
+                        y++;
+                    }
+
+                    if (y==repeatValue)
+                    {                
+                        clearInterval(interval);
+                    }
+
+                    x++;
+
+                    /* Pausa */
+                } else if (relaxCheck==true) {
+                    document.getElementById("popup-number").innerHTML = "ciao";
+                    relaxCheck=false;
                 }
-                x++;
             }
 
-
+            /* Stop timer e azzeramento variabili - Tutto torna normale */
             document.getElementById("popup-stop").onclick = function ()
             {
                 document.getElementById("popup-timer").style.display = "none";
@@ -86,16 +100,18 @@ document.getElementById("timer-submit").onclick = function()
                 threeSec.pause();
                 threeSec.currentTime = 0;
 
-                document.getElementById("popup-number").innerHTML = 3;
+                document.getElementById("popup-number").innerHTML = "3";
                 counterPreTimer=3;
                 x=0;
-                y=0;
+                y=0;               
             }
 
         }, 1000);
 
 
     }
+
+
 
 
 
