@@ -2,19 +2,23 @@ document.getElementById("timer-submit").onclick = function()
 {
     var timeValue = document.getElementById("time").value;
     var repeatValue = document.getElementById("repeat").value;
-    var relaxValue = document.getElementById("relax").value;
+    var restValue = document.getElementById("rest").value;
     var threeSec = new Audio('audio/countdown-3sec.mp3');
     var x = 0;
     var y = 0;
     var counterPreTimer = 3;
+    var restCounter = 0;
     var preTimerCheck = false;
-    var relaxCheck = false;
+    var restCheck = false;
     var error = false;
 
     if (timeValue == "")
     {
         error = true;
     } else if (repeatValue == "")
+    {
+        error = true;
+    } else if (restValue == "")
     {
         error = true;
     }
@@ -46,9 +50,7 @@ document.getElementById("timer-submit").onclick = function()
 
                 if (counterPreTimer==0)
                 {
-                    /* counterPreTimer=0; */
                     preTimerCheck = true;
-                    /* document.getElementById("popup-number").innertHTML = counterPreTimer; */
                 }
 
                 counterPreTimer--;
@@ -59,7 +61,7 @@ document.getElementById("timer-submit").onclick = function()
             else if (preTimerCheck == true)
             {
 
-                if (relaxCheck == false)
+                if (restCheck == false)
                 {
                 
                     if(x==(timeValue-3))
@@ -73,7 +75,7 @@ document.getElementById("timer-submit").onclick = function()
                     {
                         x=0;
                         document.getElementById("popup-number").innerHTML = x;
-                        relaxCheck=true;
+                        restCheck=true;
                         y++;
                     }
 
@@ -85,9 +87,24 @@ document.getElementById("timer-submit").onclick = function()
                     x++;
 
                     /* Pausa */
-                } else if (relaxCheck==true) {
-                    document.getElementById("popup-number").innerHTML = "ciao";
-                    relaxCheck=false;
+                } else if (restCheck==true) {
+
+                    if(restCounter==(restValue-3))
+                    {
+                        threeSec.play();
+                    }
+
+                    document.getElementById("popup-number").innerHTML = restCounter;
+
+                    if(restCounter>restValue)
+                    {
+                        restCounter=0;
+                        document.getElementById("popup-number").innerHTML = restCounter;
+                        restCheck=false;
+                        
+                    }
+
+                    restCounter++;
                 }
             }
 
