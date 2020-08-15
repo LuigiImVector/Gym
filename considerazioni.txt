@@ -1,8 +1,8 @@
     ToDo
 
 +Aggiustare NavBar - Con questo metodo in tutta la navbar c'è il 'cursor: pointer' dato che gli elementi sono width: 100%
-+Il "beep" finale deve essere fatto prima
-+Tempo di riposo
++Aggiunta di una scritta sopra il numero 'Lavoro/Riposo'
++Sistemare in responsive 'popup-timer'
 +Aggiungere pulsante (In popup-timer) per riattivare il timer (Credo servano le FUNZIONI)
 +Pulsante-testo 'Funzioni aggiuntive'//'Altro'
 +Cambiare metodo per registrarsi/entrare, quello attuale fa pena, si confonde con il timer
