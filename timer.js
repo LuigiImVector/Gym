@@ -8,16 +8,23 @@ var intervalCounter = 0;
 var preTimerCheck = false;
 var restCheck = false;
 var error = false;
+/* Value */
+var timeValue;
+var repeatValue;
+var restValue;
 /* Other */
 var threeSec = new Audio('audio/countdown-3sec.mp3');
 var interval = [];
 
 
+
 function timer()
 {
-    var timeValue = document.getElementById("time").value;
-    var repeatValue = document.getElementById("repeat").value;
-    var restValue = document.getElementById("rest").value;
+    timeValue = document.getElementById("time").value;
+    repeatValue = document.getElementById("repeat").value;
+    restValue = document.getElementById("rest").value;
+
+    error = false;
 
     /* Verifica variabili */
     if (timeValue == "")
@@ -36,6 +43,7 @@ function timer()
         document.getElementById("timer-error-message").style.display = "flex";
     } else
     {
+
         document.getElementById("timer-error-message").style.display = "none";
         document.getElementById("popup-timer").style.display = "block";
 

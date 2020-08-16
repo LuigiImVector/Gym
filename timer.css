@@ -46,16 +46,17 @@ body { /* index.css */
     position: absolute;
 }
 
-#navbar-title { /* index.css */
+#navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */
     font-size: 28px;
     font-family: 'Quicksand', sans-serif;
     margin: 5px 0px 0px 12px;
     position: absolute;
     z-index: 2;
     color: white;
+    text-decoration: none;
 }
 
-#navbar-login { /* index.css */
+#navbar-login, #navbar-login:hover, #navbar-login:active, #navbar-login:visited, #navbar-login:focus { /* index.css */
     font-size: 28px;
     font-family: 'Quicksand', sans-serif;
     margin: 5px 12px 0px 0px;
@@ -64,8 +65,8 @@ body { /* index.css */
     color: white;
     text-align: right;
     text-decoration: none;
-    cursor: pointer;
 }
+
 
 #timer-form{ 
     display: block;
