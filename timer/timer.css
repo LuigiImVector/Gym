@@ -7,7 +7,7 @@ body, html { /* index.css */
 }
 
 html { /* index.css */
-    background: url(gym-background.jpg);
+    background: url(/opt/lampp/htdocs/Gym/img/gym-background.jpg);
     max-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@ body { /* index.css */
 }
 
 #background-image { /* index.css FORSE */
-    background: url(gym-background.jpg);
+    background: url(/opt/lampp/htdocs/Gym/img/gym-background.jpg);
     max-width: 100%;
     height: 100%;
     width: 100%;

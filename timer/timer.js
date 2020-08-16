@@ -13,7 +13,7 @@ var timeValue;
 var repeatValue;
 var restValue;
 /* Other */
-var threeSec = new Audio('audio/countdown-3sec.mp3');
+var threeSec = new Audio('/opt/lampp/htdocs/Gym/audio/countdown-3sec.mp3');
 var interval = [];
 
 
