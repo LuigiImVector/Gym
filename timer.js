@@ -76,10 +76,12 @@ function timer()
             /* Timer effettivo + Pausa*/
             else if (preTimerCheck == true)
             {
-
+                /* Timer */
                 if (restCheck == false)
                 {
-                
+                    document.getElementById("popup-timer").style.backgroundColor = "#09bdbd";
+                    document.getElementById("popup-status").innerHTML = "Lavoro";
+
                     if(x==(timeValue-3))
                     {
                         threeSec.play();
@@ -104,6 +106,9 @@ function timer()
 
                 /* Pausa */
                 } else if (restCheck==true) {
+
+                    document.getElementById("popup-timer").style.backgroundColor = "#dfaa0a";
+                    document.getElementById("popup-status").innerHTML = "Riposo";
 
                     if(restCounter==(restValue-3))
                     {
@@ -134,9 +139,16 @@ function timer()
                 threeSec.currentTime = 0;
 
                 document.getElementById("popup-number").innerHTML = "3";
-                counterPreTimer=3;
-                x=0;
-                y=0;               
+                document.getElementById("popup-status").innerHTML = "Pre-Timer";
+                document.getElementById("popup-timer").style.backgroundColor = "#dfaa0a";
+
+                /* Il valore delle variabili tornano allo stato iniziale */
+                x = 0;
+                y = 0;
+                counterPreTimer = 3;
+                restCounter = 0;
+                preTimerCheck = false;
+                restCheck = false;               
             }
 
         }, 1000);
@@ -163,6 +175,8 @@ document.getElementById("popup-back-again").onclick = function(){
     threeSec.currentTime = 0;
 
     document.getElementById("popup-number").innerHTML = "3";
+    document.getElementById("popup-status").innerHTML = "Pre-Timer";
+    document.getElementById("popup-timer").style.backgroundColor = "#dfaa0a";
 
     /* Il valore delle variabili tornano allo stato iniziale */
     x = 0;

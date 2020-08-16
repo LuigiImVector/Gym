@@ -1,7 +1,5 @@
 T o D o
 
-+Aggiunta di una scritta sopra il numero 'Lavoro/Riposo'
-+Migliorare la grafica del pulsante 'popup-back-again'
 +Aggiunta numero di ripetizioni
 +Sistemare in responsive 'popup-timer'
 
@@ -10,6 +8,7 @@ T o D o
 +Autenticandosi si verrà portati in una pagina in cui sarà possibile scrivere qualsiasi cosa si voglia.
 
 
++In base al tempo mancante lo sfondo cambia - Sarebbe bello che il colore dello sfondo-Lavoro cambiasse fino a diventare quello dello sfondo-Riposo (Magari per evitare che la persona si confonda si può fare che lo sfondo di quando manca 1 secondo alla fine del timer-Lavoro sia simile ma non uguale allo sfondo-Riposo) [Dopo la versione 1.0]
 +Pulsante-testo 'Funzioni aggiuntive'//'Altro' [Dopo la versione 1.0 - Forse] || Esercizio 1 questo tempo, Esercizio 2 quest'altro ...
 +Creare pannello di controllo [Dopo la versione 1.0]
 
@@ -20,3 +19,16 @@ C o n s i d e r a z i o n i
 
 Il sito sta migliorando, niente di così eccessivo ma sta migliorando; in pochi giorni ho fatto molti progressi e spero di finire la pagina di timer.html in pochi giorni (Con responsive compreso).
 Azzarderei a dire che sono alla versione 0.9.
+
+
+
+
+-
+
+C o l o r i
+
+
+Verde - #09bd47
+Verde leggermente più chiaro - #05c848
+Azzurro - #09bdbd
+Giallo - #dfaa0a
