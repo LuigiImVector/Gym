@@ -1,5 +1,10 @@
 T o D o
 
++Fixare navbar (Ma io l'avevo fixata wtf)
++Mettere tutti i valori in '1' e vedere che succede e perché succede
++Se metto 'Time 0' e lascio un campo vuoto il sistema non mi da l'errore del campo vuoto ma solo quello del valore basso - Controllare
++Appena finisce il timer bisogna cacciare 'popup-status' o comunque modificarlo
++Appena finisce il timer bisognerebbe usare uno sfondo diverso (Magari il verde)
 +Aggiunta numero di ripetizioni
 +Sistemare in responsive 'popup-timer'
 

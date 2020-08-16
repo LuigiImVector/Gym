@@ -8,6 +8,7 @@ var intervalCounter = 0;
 var preTimerCheck = false;
 var restCheck = false;
 var error = false;
+var valueNotValid = false;
 /* Value */
 var timeValue;
 var repeatValue;
@@ -24,22 +25,56 @@ function timer()
     repeatValue = document.getElementById("repeat").value;
     restValue = document.getElementById("rest").value;
 
+    /* Reset schermata PopUp */
+    document.getElementById("popup-number").innerHTML = "3";
+    document.getElementById("popup-status").innerHTML = "Pre-Timer";
+    document.getElementById("popup-timer").style.backgroundColor = "#dfaa0a";
+
+    /* Reset variabili */
+    counterPreTimer = 3;
+    restCounter = 0;
+    x = 0;
+    y = 0;   
+    preTimerCheck = false;
+    valueNotValid = false;
+    restCheck = false;   
     error = false;
+    
+
 
     /* Verifica variabili */
     if (timeValue == "")
     {
         error = true;
+    } else if (timeValue <= 0)
+    {
+        error = true;
+        valueNotValid = true;
     } else if (repeatValue == "")
     {
         error = true;
+    } else if (repeatValue <= 0)
+    {
+        error = true;
+        valueNotValid = true;
     } else if (restValue == "")
     {
         error = true;
+    } else if (restValue <= 0)
+    {
+        error = true;
+        valueNotValid = true;
     }
+
 
     if (error == true)
     {
+        if (valueNotValid == false) {
+            document.getElementById("timer-error-message").innerHTML = '<b style="padding-right: 3px">Attenzione!</b> Compilare tutti i campi.';
+        } else {
+            document.getElementById("timer-error-message").innerHTML = '<b style="padding-right: 3px">Attenzione!</b> I valori devono essere maggiori di 0.';
+        }
+
         document.getElementById("timer-error-message").style.display = "flex";
     } else
     {
@@ -100,6 +135,7 @@ function timer()
                     if (y==repeatValue)
                     {                
                         clearInterval(interval[intervalCounter]);
+                        document.getElementById("popup-number").innerHTML = "Fine";
                     }
 
                     x++;
@@ -137,18 +173,7 @@ function timer()
                 clearInterval(interval[intervalCounter]);
                 threeSec.pause();
                 threeSec.currentTime = 0;
-
-                document.getElementById("popup-number").innerHTML = "3";
-                document.getElementById("popup-status").innerHTML = "Pre-Timer";
-                document.getElementById("popup-timer").style.backgroundColor = "#dfaa0a";
-
-                /* Il valore delle variabili tornano allo stato iniziale */
-                x = 0;
-                y = 0;
-                counterPreTimer = 3;
-                restCounter = 0;
-                preTimerCheck = false;
-                restCheck = false;               
+                           
             }
 
         }, 1000);
@@ -174,17 +199,7 @@ document.getElementById("popup-back-again").onclick = function(){
     threeSec.pause();
     threeSec.currentTime = 0;
 
-    document.getElementById("popup-number").innerHTML = "3";
-    document.getElementById("popup-status").innerHTML = "Pre-Timer";
-    document.getElementById("popup-timer").style.backgroundColor = "#dfaa0a";
 
-    /* Il valore delle variabili tornano allo stato iniziale */
-    x = 0;
-    y = 0;
-    counterPreTimer = 3;
-    restCounter = 0;
-    preTimerCheck = false;
-    restCheck = false;
     
     timer();
 };
