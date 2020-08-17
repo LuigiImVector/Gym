@@ -28,6 +28,7 @@ function timer()
     /* Reset schermata PopUp */
     document.getElementById("popup-number").innerHTML = "3";
     document.getElementById("popup-status").innerHTML = "Pre-Timer";
+    document.getElementById("popup-status").style.display = "block";
     document.getElementById("popup-timer").style.backgroundColor = "#dfaa0a";
 
     /* Reset variabili */
@@ -136,6 +137,8 @@ function timer()
                     {                
                         clearInterval(interval[intervalCounter]);
                         document.getElementById("popup-number").innerHTML = "Fine";
+                        document.getElementById("popup-timer").style.backgroundColor = "#05c848";
+                        document.getElementById("popup-status").style.display = "none";
                     }
 
                     x++;

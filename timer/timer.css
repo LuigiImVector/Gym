@@ -50,8 +50,7 @@ body { /* index.css */
     font-size: 28px;
     font-family: 'Quicksand', sans-serif;
     margin: 5px 0px 0px 12px;
-    position: absolute;
-    z-index: 2;
+    float: left;
     color: white;
     text-decoration: none;
 }
@@ -60,8 +59,7 @@ body { /* index.css */
     font-size: 28px;
     font-family: 'Quicksand', sans-serif;
     margin: 5px 12px 0px 0px;
-    position: absolute;
-    z-index: 2;
+    float: right;
     color: white;
     text-align: right;
     text-decoration: none;
@@ -108,6 +106,20 @@ body { /* index.css */
     font-size: 16px
 }
 
+#repeat {
+    margin-bottom: 12px !important;
+}
+
+#div-repeat-checkbox {
+    display: block;
+    margin: 0;
+    margin-bottom: 25px;
+    text-align: left;
+    color: white;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 12px; /* Credo */ 
+}
+
 #popup-timer {
     display: none;
     width: 98%;
@@ -133,6 +145,7 @@ body { /* index.css */
 }
 
 #popup-status {
+    display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 22px;
 }
