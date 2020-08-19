@@ -1,7 +1,8 @@
 /* Counter */
 var x = 0;
 var y = 0;
-var counterPreTimer = 3;
+var numeroRipetizioni = 0; /* Nome variabile da modificare (forse) */
+var counterPreTimer = 3; 
 var restCounter = 0;
 var intervalCounter = 0;
 /* Boolean */
@@ -17,6 +18,15 @@ var restValue;
 var threeSec = new Audio('/opt/lampp/htdocs/Gym/audio/countdown-3sec.mp3');
 var interval = [];
 
+/* Disabilitare l'input (repeat) appena viene "checkato" il checkbox */
+document.getElementById("repeat-checkbox").onclick = function () {
+    if (document.getElementById("repeat-checkbox").checked == true)
+    {
+        document.getElementById("repeat").disabled = true;
+    } else {
+        document.getElementById("repeat").disabled = false;
+    }
+}
 
 
 function timer()
@@ -129,6 +139,8 @@ function timer()
                     {
                         x=0;
                         document.getElementById("popup-number").innerHTML = x;
+                        numeroRipetizioni++;
+                        document.getElementById("popup-numero-ripetizioni").innerHTML = numeroRipetizioni;
                         restCheck=true;
                         y++;
                     }

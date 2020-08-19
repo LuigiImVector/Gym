@@ -117,8 +117,14 @@ body { /* index.css */
     text-align: left;
     color: white;
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-size: 12px; /* Credo */ 
+    font-size: 15px;
 }
+
+#label-repeat-checkbox {
+    position: relative;
+    top: -2px;
+}
+
 
 #popup-timer {
     display: none;
