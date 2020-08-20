@@ -133,6 +133,19 @@ body { /* index.css */
 }
 
 
+/* Nasconde le freccette per incrementare/decrementare il valore */
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+
 #popup-timer {
     display: none;
     width: 98%;
@@ -184,11 +197,11 @@ body { /* index.css */
 
 }
 
-#popup-numero-ripetizioni {
-    /* display: inline-block;
-    font-size: 200px; */
+/* #popup-numero-ripetizioni {
+    display: inline-block;
+    font-size: 200px;
 }
-
+ */
 #popup-stop {
     background-color: red;
     padding: 10px 30px;

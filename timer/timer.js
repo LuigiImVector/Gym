@@ -32,16 +32,21 @@ document.getElementById("repeat-checkbox").onclick = function () {
 function timer()
 {
     timeValue = document.getElementById("time").value;
-    repeatValue = document.getElementById("repeat").value;
     restValue = document.getElementById("rest").value;
+    checkbox = document.getElementsByClassName("repeat-checkbox").value;
+    if (checkbox == "1") {
+        repeatValue = document.getElementById("repeat").value;
+    }
 
     /* Reset schermata PopUp */
     document.getElementById("popup-number").innerHTML = "3";
     document.getElementById("popup-status").innerHTML = "Pre-Timer";
     document.getElementById("popup-status").style.display = "block";
+    document.getElementsById("popup-numero-ripetizioni").innerHTML = "0";
     document.getElementById("popup-timer").style.backgroundColor = "#dfaa0a";
 
     /* Reset variabili */
+    numeroRipetizioni = 0;
     counterPreTimer = 3;
     restCounter = 0;
     x = 0;

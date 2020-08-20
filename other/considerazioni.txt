@@ -1,6 +1,5 @@
 T o D o
 
-+Appena finisce il timer bisogna cacciare 'popup-status' o comunque modificarlo
 +Modificare posizione 'popup-numero-ripetizioni'
 +Sistemare in responsive 'popup-timer'
 
