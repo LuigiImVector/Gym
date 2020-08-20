@@ -1,10 +1,7 @@
 T o D o
 
-+Aggiustare la posizione del checkbox in caso ci sia il messaggio di errore
-+Modificare posizione 'popup-numero-ripetizioni'
-+Mettere tutti i valori in '1' e vedere che succede e perché succede
-+Se metto 'Time 0' e lascio un campo vuoto il sistema non mi da l'errore del campo vuoto ma solo quello del valore basso - Controllare
 +Appena finisce il timer bisogna cacciare 'popup-status' o comunque modificarlo
++Modificare posizione 'popup-numero-ripetizioni'
 +Sistemare in responsive 'popup-timer'
 
 +Cambiare metodo per registrarsi/entrare, quello attuale fa pena, si confonde con il timer

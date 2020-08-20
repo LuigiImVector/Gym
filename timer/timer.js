@@ -9,7 +9,7 @@ var intervalCounter = 0;
 var preTimerCheck = false;
 var restCheck = false;
 var error = false;
-var valueNotValid = false;
+var noValue = false;
 /* Value */
 var timeValue;
 var repeatValue;
@@ -47,7 +47,7 @@ function timer()
     x = 0;
     y = 0;   
     preTimerCheck = false;
-    valueNotValid = false;
+    noValue = false;
     restCheck = false;   
     error = false;
     
@@ -57,37 +57,39 @@ function timer()
     if (timeValue == "")
     {
         error = true;
+        noValue = true;
     } else if (timeValue <= 0)
     {
         error = true;
-        valueNotValid = true;
-    } else if (repeatValue == "")
+    }
+    if (repeatValue == "")
     {
         error = true;
+        noValue = true;
     } else if (repeatValue <= 0)
     {
         error = true;
-        valueNotValid = true;
-    } else if (restValue == "")
+    }
+    if (restValue == "")
     {
         error = true;
+        noValue = true;
     } else if (restValue <= 0)
     {
         error = true;
-        valueNotValid = true;
     }
 
 
-    if (error == true)
+    if (error == true) /* Mostra messaggio di errore */
     {
-        if (valueNotValid == false) {
+        if (noValue == true) {
             document.getElementById("timer-error-message").innerHTML = '<b style="padding-right: 3px">Attenzione!</b> Compilare tutti i campi.';
         } else {
             document.getElementById("timer-error-message").innerHTML = '<b style="padding-right: 3px">Attenzione!</b> I valori devono essere maggiori di 0.';
         }
 
         document.getElementById("timer-error-message").style.display = "flex";
-    } else
+    } else /* Inizia il vero e proprio programma */
     {
 
         document.getElementById("timer-error-message").style.display = "none";
