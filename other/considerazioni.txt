@@ -2,12 +2,16 @@ T o D o
 
 +Modificare posizione 'popup-numero-ripetizioni'
 +Sistemare in responsive 'popup-timer'
++Alla fine del timer (Fine fine) mettere un suono prolungato
++Quando 'checkbox.checked == true' bisogna rimuovere il valore all'interno del box input 'repeat'
++Animazione da display: block a display: none (E viceversa) -- Possibile (Forse unico) metodo: Opacity: 0 // Opacity: 1;
 
 +Cambiare metodo per registrarsi/entrare, quello attuale fa pena, si confonde con il timer
 +Finire metodo Login
 +Autenticandosi si verrà portati in una pagina in cui sarà possibile scrivere qualsiasi cosa si voglia.
 
 
++Aggiungere un tasto 'Pausa' nel timer
 +In base al tempo mancante lo sfondo cambia - Sarebbe bello che il colore dello sfondo-Lavoro cambiasse fino a diventare quello dello sfondo-Riposo (Magari per evitare che la persona si confonda si può fare che lo sfondo di quando manca 1 secondo alla fine del timer-Lavoro sia simile ma non uguale allo sfondo-Riposo) [Dopo la versione 1.0]
 +Pulsante-testo 'Funzioni aggiuntive'//'Altro' [Dopo la versione 1.0 - Forse] || Esercizio 1 questo tempo, Esercizio 2 quest'altro ...
 +Creare pannello di controllo [Dopo la versione 1.0]

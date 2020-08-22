@@ -31,18 +31,12 @@ document.getElementById("repeat-checkbox").onclick = function () {
 
 function timer()
 {
-    timeValue = document.getElementById("time").value;
-    restValue = document.getElementById("rest").value;
-    checkbox = document.getElementsByClassName("repeat-checkbox").value;
-    if (checkbox == "1") {
-        repeatValue = document.getElementById("repeat").value;
-    }
-
     /* Reset schermata PopUp */
     document.getElementById("popup-number").innerHTML = "3";
     document.getElementById("popup-status").innerHTML = "Pre-Timer";
     document.getElementById("popup-status").style.display = "block";
-    document.getElementsById("popup-numero-ripetizioni").innerHTML = "0";
+    document.getElementById("popup-numero-ripetizioni").innerHTML = "0";
+    document.getElementById("popup-numero-ripetizioni").style.display = "block";
     document.getElementById("popup-timer").style.backgroundColor = "#dfaa0a";
 
     /* Reset variabili */
@@ -55,10 +49,21 @@ function timer()
     noValue = false;
     restCheck = false;   
     error = false;
+
+    /* Acquisizione nuove variabili */
+    timeValue = document.getElementById("time").value;
+    restValue = document.getElementById("rest").value;
+    checkbox = document.getElementById("repeat-checkbox");
+    if (checkbox.checked == false) {
+        document.getElementById("navbar-login").innerHTML = "ciao";
+        repeatValue = document.getElementById("repeat").value;
+    }
     
 
 
-    /* Verifica variabili */
+/* Verifica variabili */
+
+    /* Time */
     if (timeValue == "")
     {
         error = true;
@@ -67,14 +72,8 @@ function timer()
     {
         error = true;
     }
-    if (repeatValue == "")
-    {
-        error = true;
-        noValue = true;
-    } else if (repeatValue <= 0)
-    {
-        error = true;
-    }
+
+    /* Rest */
     if (restValue == "")
     {
         error = true;
@@ -84,6 +83,16 @@ function timer()
         error = true;
     }
 
+    /* Repeat */
+    if (repeatValue == "" && checkbox.checked == false)
+    {
+        error = true;
+        noValue = true;
+    } else if (repeatValue <= 0 && checkbox.checked == false)
+    {
+        error = true;
+    }
+    
 
     if (error == true) /* Mostra messaggio di errore */
     {
@@ -152,11 +161,12 @@ function timer()
                         y++;
                     }
 
-                    if (y==repeatValue)
+                    if (y==repeatValue && checkbox.checked == false)
                     {                
                         clearInterval(interval[intervalCounter]);
                         document.getElementById("popup-number").innerHTML = "Fine";
                         document.getElementById("popup-timer").style.backgroundColor = "#05c848";
+                        document.getElementById("popup-numero-ripetizioni").style.display = "none";
                         document.getElementById("popup-status").style.display = "none";
                     }
 
