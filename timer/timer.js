@@ -107,7 +107,7 @@ function timer()
     {
 
         document.getElementById("timer-error-message").style.display = "none";
-        document.getElementById("popup-timer").style.display = "block";
+        document.getElementById("popup-timer").style.opacity = "1";
 
         /* Timer */
       
@@ -200,7 +200,7 @@ function timer()
             /* Stop timer e azzeramento variabili - Tutto torna normale */
             document.getElementById("popup-stop").onclick = function ()
             {
-                document.getElementById("popup-timer").style.display = "none";
+                document.getElementById("popup-timer").style.opacity = "0";
 
                 clearInterval(interval[intervalCounter]);
                 threeSec.pause();

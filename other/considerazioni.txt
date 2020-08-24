@@ -1,10 +1,11 @@
 T o D o
 
-+Modificare posizione 'popup-numero-ripetizioni'
-+Sistemare in responsive 'popup-timer'
 +Alla fine del timer (Fine fine) mettere un suono prolungato
 +Quando 'checkbox.checked == true' bisogna rimuovere il valore all'interno del box input 'repeat'
-+Animazione da display: block a display: none (E viceversa) -- Possibile (Forse unico) metodo: Opacity: 0 // Opacity: 1;
++Animazione da display: block a display: none (E viceversa) -- Possibile (Forse unico) metodo: Opacity: 0 // Opacity: 1;        //Non so se sia possibile (senza fare casini inutili) fare un animazioni sia alla comparsa che alla scomparsa
++Modificare posizione 'popup-numero-ripetizioni'
++Sistemare in responsive 'popup-timer'
+
 
 +Cambiare metodo per registrarsi/entrare, quello attuale fa pena, si confonde con il timer
 +Finire metodo Login
