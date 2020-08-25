@@ -150,7 +150,7 @@ body { /* index.css */
     display: block;
     opacity: 0;
     width: 98%;
-    height: 96%; /* 96% */
+    height: 96%;
     position: absolute;
     background-color: #dfaa0a;
     border-radius: 10px; 
@@ -161,10 +161,11 @@ body { /* index.css */
     top: 0;
     bottom: 0;
     margin-top: 1%;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s, visibility 200ms;
     transition-duration: 0.6s;
     z-index: 5;
-    overflow: hidden; /* Senza questo è come se ci fosse un box invisibile sopra ogni cosa e quindi non si può cliccare niente */
+    overflow: hidden;
+    visibility: hidden; /* Senza questo è come se ci fosse un box invisibile sopra ogni cosa e quindi non si può cliccare niente */
 }
 
 #popup-number {

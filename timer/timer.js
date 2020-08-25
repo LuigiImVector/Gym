@@ -108,6 +108,7 @@ function timer()
 
         document.getElementById("timer-error-message").style.display = "none";
         document.getElementById("popup-timer").style.opacity = "1";
+        document.getElementById("popup-timer").style.visibility = "visible";
 
         /* Timer */
       
@@ -201,6 +202,7 @@ function timer()
             document.getElementById("popup-stop").onclick = function ()
             {
                 document.getElementById("popup-timer").style.opacity = "0";
+                document.getElementById("popup-timer").style.visibility = "hidden";
 
                 clearInterval(interval[intervalCounter]);
                 threeSec.pause();
