@@ -16,6 +16,7 @@ var repeatValue;
 var restValue;
 /* Other */
 var threeSec = new Audio('/opt/lampp/htdocs/Gym/audio/countdown-3sec.mp3');
+var threeSecExtended = new Audio('/opt/lampp/htdocs/Gym/audio/countdown-3sec-extended.mp3');
 var interval = [];
 
 /* Disabilitare l'input (repeat) appena viene "checkato" il checkbox */
@@ -145,23 +146,30 @@ function timer()
                     document.getElementById("popup-timer").style.backgroundColor = "#09bdbd";
                     document.getElementById("popup-status").innerHTML = "Lavoro";
 
-                    if(x==(timeValue-3))
+                    /* Countdown 3sec */
+                    if(x==(timeValue-3) && y<(repeatValue-1))
                     {
                         threeSec.play();
+                    }
+                    
+                    /* Ultimo countdown 3sec - Audio prolungato */
+                    if(x==(timeValue-3) && y==(repeatValue-1))
+                    {
+                        threeSecExtended.play();
                     }
 
                     document.getElementById("popup-number").innerHTML = x;
 
+                    /* Fine di una ripetizione */
                     if(x>timeValue)
                     {
                         x=0;
                         document.getElementById("popup-number").innerHTML = x;
-                        numeroRipetizioni++;
-                        document.getElementById("popup-numero-ripetizioni").innerHTML = numeroRipetizioni;
                         restCheck=true;
                         y++;
                     }
 
+                    /* Fine timer */
                     if (y==repeatValue && checkbox.checked == false)
                     {                
                         clearInterval(interval[intervalCounter]);
@@ -191,6 +199,8 @@ function timer()
                         restCounter=0;
                         document.getElementById("popup-number").innerHTML = restCounter;
                         restCheck=false;
+                        numeroRipetizioni++;
+                        document.getElementById("popup-numero-ripetizioni").innerHTML = numeroRipetizioni;
                         
                     }
 
