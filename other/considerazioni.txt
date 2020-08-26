@@ -2,7 +2,7 @@ T o D o
 
 +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4)
 +In 'Repeat' mettere un limite di ripetizioni pari a ****
-+Quando 'checkbox.checked == true' bisogna rimuovere il valore all'interno del box input 'repeat'
+
 +Modificare posizione 'popup-numero-ripetizioni'
 +Sistemare in responsive 'popup-timer'
 

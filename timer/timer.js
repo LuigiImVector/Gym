@@ -17,7 +17,9 @@ var restValue;
 /* Other */
 var threeSec = new Audio('/opt/lampp/htdocs/Gym/audio/countdown-3sec.mp3');
 var threeSecExtended = new Audio('/opt/lampp/htdocs/Gym/audio/countdown-3sec-extended.mp3');
+var repeatInput = document.getElementById("repeat");
 var interval = [];
+
 
 /* Disabilitare l'input (repeat) appena viene "checkato" il checkbox */
 document.getElementById("repeat-checkbox").onclick = function () {
@@ -27,6 +29,8 @@ document.getElementById("repeat-checkbox").onclick = function () {
     } else {
         document.getElementById("repeat").disabled = false;
     }
+
+    repeatInput.value = ''; /* Elimina i valori presenti nell'input box 'repeat' */
 }
 
 
@@ -56,7 +60,6 @@ function timer()
     restValue = document.getElementById("rest").value;
     checkbox = document.getElementById("repeat-checkbox");
     if (checkbox.checked == false) {
-        document.getElementById("navbar-login").innerHTML = "ciao";
         repeatValue = document.getElementById("repeat").value;
     }
     
@@ -146,19 +149,27 @@ function timer()
                     document.getElementById("popup-timer").style.backgroundColor = "#09bdbd";
                     document.getElementById("popup-status").innerHTML = "Lavoro";
 
-                    /* Countdown 3sec */
-                    if(x==(timeValue-3) && y<(repeatValue-1))
+                    document.getElementById("popup-number").innerHTML = x;
+
+                    /* Audio 3 secondi */
+                    if(checkbox.checked == false)   /* Ripetizioni limitate */
+                    {   
+                        /* Countdown 3sec */
+                        if(x==(timeValue-3) && y<(repeatValue-1))
+                        {
+                            threeSec.play();
+                            
+                        }
+                            /* Ultimo countdown 3 sec - Audio prolungato */
+                            else if (x==(timeValue-3) && y==(repeatValue-1))
+                            {
+                                threeSecExtended.play();
+                            }
+                        
+                    } else if (checkbox.checked == true && x==(timeValue-3))    /* Ripetizioni infinite */
                     {
                         threeSec.play();
-                    }
-                    
-                    /* Ultimo countdown 3sec - Audio prolungato */
-                    if(x==(timeValue-3) && y==(repeatValue-1))
-                    {
-                        threeSecExtended.play();
-                    }
-
-                    document.getElementById("popup-number").innerHTML = x;
+                    }         
 
                     /* Fine di una ripetizione */
                     if(x>timeValue)
@@ -217,7 +228,8 @@ function timer()
                 clearInterval(interval[intervalCounter]);
                 threeSec.pause();
                 threeSec.currentTime = 0;
-                           
+                threeSecExtended.pause();
+                threeSecExtended.currentTime = 0;                           
             }
 
         }, 1000);
