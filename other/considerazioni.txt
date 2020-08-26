@@ -3,6 +3,16 @@ T o D o
 +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4)
 +In 'Repeat' mettere un limite di ripetizioni pari a ****
 
++Per calcolare il giusto margine da dare al checkbox scrivere la formula matematica al posto del numero finale      -- Con javaScript è più facile credo
+    {
+        502 = Larghezza timer-form
+        366 = Larghezza input
+        
+        (502-366)/2 <--- Formula per calcolare il margin-left del checkbox
+    }
+    
+    Leggersi - https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+
 +Modificare posizione 'popup-numero-ripetizioni'
 +Sistemare in responsive 'popup-timer'
 
@@ -37,3 +47,13 @@ Verde - #09bd47
 Verde leggermente più chiaro - #05c848
 Azzurro - #09bdbd
 Giallo - #dfaa0a
+
+-
+
+L i n k s
+
+https://www.html.it/pag/32822/prima-i-contenuti-prima-il-mobile/
+https://www.html.it/pag/19467/css-media-queries-caratteristiche-dei-media/
+https://www.html.it/pag/19466/css-media-queries-le-basi/
+https://www.html.it/pag/19466/css-media-queries-le-basi/
+https://developers.google.com/web/fundamentals/design-and-ux/responsive?hl=it
