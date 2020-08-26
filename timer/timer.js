@@ -20,6 +20,17 @@ var threeSecExtended = new Audio('/opt/lampp/htdocs/Gym/audio/countdown-3sec-ext
 var repeatInput = document.getElementById("repeat");
 var interval = [];
 
+/* Test */
+    /* var primoTest = document.querySelector("timer-form");
+    var testoQuesto = window.getComputedStyle(primoTest);;
+
+    alert("Width: " + testoQuesto.width); */
+
+    var elem = document.getElementById("timer-form");
+    var theCSSprop = window.getComputedStyle(elem, null).getPropertyValue("width");
+    document.getElementById("navbar-login").innerHTML = theCSSprop;
+
+
 
 /* Disabilitare l'input (repeat) appena viene "checkato" il checkbox */
 document.getElementById("repeat-checkbox").onclick = function () {
