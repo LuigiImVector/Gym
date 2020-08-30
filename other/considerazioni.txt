@@ -1,5 +1,7 @@
 T o D o
 
++Appena viene caricata la pagina bisogna controllare se il checkbox è checkato e disabilitare l'input -- Se prima c'è il checkbox checked e poi si riavvia la pagina lo stato del checkbox rimane invariato ma l'input si "attiva" (Comunque non viene contato il valore al suo interno)
++Creare una classe comune per i due pulsanti 'Rifai', 'Stop' e inserire le opzioni comuni come il margine - È bruttissimo ogni volta dover cambiare i margini da entrambe le parti
 +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4)
 +In 'Repeat' mettere un limite di ripetizioni pari a ****
 
