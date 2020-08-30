@@ -43,26 +43,24 @@ body { /* index.css */
 #navbar { /* index.css */
     height: 45px;
     width: 100%;
+    font-size: 28px;
+    font-family: 'Quicksand', sans-serif;
     position: absolute;
 }
 
-#navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */
-    font-size: 28px;
-    font-family: 'Quicksand', sans-serif;
+#navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */   
     margin: 5px 0px 0px 12px;
-    float: left;
-    color: white;
+    float: left; 
     text-decoration: none;
+    color: white;  
 }
 
 #navbar-login, #navbar-login:hover, #navbar-login:active, #navbar-login:visited, #navbar-login:focus { /* index.css */
-    font-size: 28px;
-    font-family: 'Quicksand', sans-serif;
     margin: 5px 12px 0px 0px;
     float: right;
-    color: white;
     text-align: right;
     text-decoration: none;
+    color: white;
 }
 
 
@@ -224,3 +222,41 @@ body { /* index.css */
     background-color: rgb(240, 0, 0);
 
 }
+
+
+
+@media (max-width: 480px)
+{
+    #navbar
+    {
+        font-size: 150%;
+    }
+
+
+    .timer-input-class {
+        width: 69%; /* Lucifer Estrella de la mañana */
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .timer-label-class {
+        font-size: 17px;
+    }
+
+    #div-repeat-checkbox {
+        font-size: 15px;
+    }
+
+    #popup-number {
+        font-size: 300px;
+    }
+
+    #popup-stop {
+        margin-top: 28%;
+    }
+
+    #popup-back-again {
+        margin-top: 28%;
+    }
+}
+
