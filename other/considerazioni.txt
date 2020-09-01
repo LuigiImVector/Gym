@@ -1,14 +1,6 @@
 T o D o
 
-+Per calcolare il giusto margine da dare al checkbox scrivere la formula matematica al posto del numero finale      -- Con javaScript è più facile credo
-    {
-        502 = Larghezza timer-form
-        366 = Larghezza input
-        
-        (502-366)/2 <--- Formula per calcolare il margin-left del checkbox
-    }
-    
-    Leggersi - https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
++Per calcolare il giusto margine da dare al checkbox scrivere la formula matematica al posto del numero finale -- calc ()
 
 +Modificare posizione 'popup-numero-ripetizioni'
 +Sistemare in responsive 'popup-timer'
