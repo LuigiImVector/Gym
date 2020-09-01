@@ -44,6 +44,12 @@ document.getElementById("repeat-checkbox").onclick = function () {
     repeatInput.value = ''; /* Elimina i valori presenti nell'input box 'repeat' */
 }
 
+/* Se viene riavviata la pagina e il checkbox rimane "checkato" anche il box input 'repeat' rimane disabilitato */
+if (document.getElementById("repeat-checkbox").checked == true)
+{
+    document.getElementById("repeat").disabled = true;
+}
+
 
 function timer()
 {
