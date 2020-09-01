@@ -19,16 +19,30 @@ var threeSec = new Audio('/opt/lampp/htdocs/Gym/audio/countdown-3sec.mp3');
 var threeSecExtended = new Audio('/opt/lampp/htdocs/Gym/audio/countdown-3sec-extended.mp3');
 var repeatInput = document.getElementById("repeat");
 var interval = [];
+var element;
+var tempValue;
+var timerFormWidth;
+var inputWidth;
+var marginCheckbox;
 
-/* Test */
-    /* var primoTest = document.querySelector("timer-form");
-    var testoQuesto = window.getComputedStyle(primoTest);;
 
-    alert("Width: " + testoQuesto.width); */
+/* Valore: timer-form */
+element = document.getElementById("timer-form");
+tempValue = window.getComputedStyle(element).getPropertyValue("width");
+timerFormWidth = tempValue.replace(/[^0-9\.]+/g, "");
+document.getElementById("navbar-login").innerHTML = timerFormWidth;
 
-    var elem = document.getElementById("timer-form");
-    var theCSSprop = window.getComputedStyle(elem, null).getPropertyValue("width");
-    document.getElementById("navbar-login").innerHTML = theCSSprop;
+/* Valore: time */
+element = document.getElementById("time");
+tempValue = window.getComputedStyle(element).getPropertyValue("width");
+inputWidth = tempValue.replace(/[^0-9\.]+/g, "");
+inputWidth = parseFloat(inputWidth) + 18;     /* (1 padding left + 8 border left) * 2 (right) */
+document.getElementById("navbar-title").innerHTML = inputWidth;
+
+/* Totale margine checkbox */
+marginCheckbox = (timerFormWidth-inputWidth)/2;
+document.getElementsByClassName("timer-label-class")[0].innerHTML = marginCheckbox;
+
 
 
 
