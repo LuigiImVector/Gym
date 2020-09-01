@@ -43,7 +43,11 @@ document.getElementById("navbar-title").innerHTML = inputWidth;
 marginCheckbox = (timerFormWidth-inputWidth)/2;
 document.getElementsByClassName("timer-label-class")[0].innerHTML = marginCheckbox;
 
-
+/* Guardare dopo */
+/* https://stackoverflow.com/questions/641857/javascript-window-resize-event */
+window.addEventListener('resize', function(event){
+    console.log("ciao");
+});
 
 
 /* Disabilitare l'input (repeat) appena viene "checkato" il checkbox */
