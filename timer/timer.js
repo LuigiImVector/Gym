@@ -26,27 +26,45 @@ var inputWidth;
 var marginCheckbox;
 
 
-/* Valore: timer-form */
-element = document.getElementById("timer-form");
-tempValue = window.getComputedStyle(element).getPropertyValue("width");
-timerFormWidth = tempValue.replace(/[^0-9\.]+/g, "");
-document.getElementById("navbar-login").innerHTML = timerFormWidth;
+/* MarginLeft automatico: repeat-checkbox */
 
-/* Valore: time */
-element = document.getElementById("time");
-tempValue = window.getComputedStyle(element).getPropertyValue("width");
-inputWidth = tempValue.replace(/[^0-9\.]+/g, "");
-inputWidth = parseFloat(inputWidth) + 18;     /* (1 padding left + 8 border left) * 2 (right) */
-document.getElementById("navbar-title").innerHTML = inputWidth;
+/* Appena la pagina viene caricata */
+    /* Valore: timer-form */
+    element = document.getElementById("timer-form");
+    tempValue = window.getComputedStyle(element).getPropertyValue("width");
+    timerFormWidth = tempValue.replace(/[^0-9\.]+/g, "");
 
-/* Totale margine checkbox */
-marginCheckbox = (timerFormWidth-inputWidth)/2;
-document.getElementsByClassName("timer-label-class")[0].innerHTML = marginCheckbox;
+    /* Valore: time */
+    element = document.getElementById("time");
+    tempValue = window.getComputedStyle(element).getPropertyValue("width");
+    inputWidth = tempValue.replace(/[^0-9\.]+/g, "");
+    inputWidth = parseFloat(inputWidth) + 18;     /* (1 padding left + 8 border left) * 2 (right) */
 
-/* Guardare dopo */
-/* https://stackoverflow.com/questions/641857/javascript-window-resize-event */
+    /* Totale margine checkbox + Margine automatico */
+    marginCheckbox = (timerFormWidth-inputWidth)/2;
+    document.getElementById("repeat-checkbox").style.marginLeft = marginCheckbox + "px";
+
+
+
+
+/* Appena viene ridimensionata la pagina */
 window.addEventListener('resize', function(event){
-    console.log("ciao");
+
+    /* Valore: timer-form */
+    element = document.getElementById("timer-form");
+    tempValue = window.getComputedStyle(element).getPropertyValue("width");
+    timerFormWidth = tempValue.replace(/[^0-9\.]+/g, "");
+
+    /* Valore: time */
+    element = document.getElementById("time");
+    tempValue = window.getComputedStyle(element).getPropertyValue("width");
+    inputWidth = tempValue.replace(/[^0-9\.]+/g, "");
+    inputWidth = parseFloat(inputWidth) + 18;     /* (1 padding left + 8 border left) * 2 (right) */
+
+    /* Totale margine checkbox + Margine automatico*/
+    marginCheckbox = (timerFormWidth-inputWidth)/2;
+    document.getElementById("repeat-checkbox").style.marginLeft = marginCheckbox + "px";
+
 });
 
 

@@ -122,7 +122,7 @@ body { /* index.css */
 
 #repeat-checkbox {
     margin: 0;
-    margin-left: calc((502px - 366px)/2);   /* Attento agli spazi! */
+    margin-left: 68px;
 }
 
 #label-repeat-checkbox {

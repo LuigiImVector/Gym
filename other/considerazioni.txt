@@ -1,7 +1,5 @@
 T o D o
 
-+Per calcolare il giusto margine da dare al checkbox scrivere la formula matematica al posto del numero finale -- calc ()
-
 +Modificare posizione 'popup-numero-ripetizioni'
 +Sistemare in responsive 'popup-timer'
 
