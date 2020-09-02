@@ -188,10 +188,11 @@ body { /* index.css */
 
 }
 
-/* #popup-numero-ripetizioni {
-    display: inline-block;
-    font-size: 200px;
-} */
+#popup-numero-ripetizioni {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+}
 
 #popup-stop {
     background-color: red; 
@@ -249,6 +250,13 @@ body { /* index.css */
 
     #popup-back-again {
         margin-top: 28%;
+    }
+}
+
+@media (min-width: 1921px)
+{
+    #navbar-login {
+        color: red;
     }
 }
 
