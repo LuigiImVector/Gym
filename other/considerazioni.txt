@@ -1,7 +1,9 @@
 T o D o
 
-+Modificare posizione 'popup-numero-ripetizioni'
++Negli input box inserire un'altezza e una larghezza seria (50 e 300 per esempio)
++Checkbox piccolo
 +Sistemare in responsive 'popup-timer'
++Aggiungere il meta tag (?) con lo scaling e blabla
 
 +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4)
 +In 'Repeat' mettere un limite di ripetizioni pari a ****
@@ -46,3 +48,9 @@ https://www.html.it/pag/19467/css-media-queries-caratteristiche-dei-media/
 https://www.html.it/pag/19466/css-media-queries-le-basi/
 https://www.html.it/pag/19466/css-media-queries-le-basi/
 https://developers.google.com/web/fundamentals/design-and-ux/responsive?hl=it
+
+--
+
+https://uxtricks.design/blogs/ux-design/responsive-design/
+http://devfacts.com/media-queries-breakpoints-2020/
+https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css
