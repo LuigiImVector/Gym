@@ -69,7 +69,7 @@ body { /* index.css */
     align-items: center;    
     text-align: center;
     margin: auto;
-    width: 502px;
+    /* width: 502px; */
     height: auto;
     z-index: 2;
 }
@@ -101,8 +101,8 @@ body { /* index.css */
 
 .timer-input-class {
     margin-bottom: 25px;
-    height: 53px;
-    width: 348px;
+    height: 55px;
+    width: 350px;
     font-size: 16px
 }
 
@@ -228,7 +228,7 @@ body { /* index.css */
 
     .timer-input-class {
         width: 69%; /* Lucifer Estrella de la mañana */
-        height: 45px;
+        height: 50px;
         font-size: 15px;
     }
 
@@ -255,8 +255,28 @@ body { /* index.css */
 
 @media (min-width: 1921px)
 {
-    #navbar-login {
+    #navbar {
         color: red;
+        font-size: 80px;
+    }
+
+    .timer-input-class {
+        width: 1000px;
+        height: 150px;
+        font-size: 40px;
+    }
+
+    .timer-label-class {
+        font-size: 50px;
+    }
+
+    #repeat-checkbox {
+        transform: scale(2.5);
+        margin-top: 25px;
+    }
+
+    #label-repeat-checkbox {
+        font-size: 40px;
     }
 }
 

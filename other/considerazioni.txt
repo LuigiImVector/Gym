@@ -1,9 +1,7 @@
 T o D o
 
-+Negli input box inserire un'altezza e una larghezza seria (50 e 300 per esempio)
-+Checkbox piccolo
 +Sistemare in responsive 'popup-timer'
-+Aggiungere il meta tag (?) con lo scaling e blabla
++Sistemare il chechbox
 
 +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4)
 +In 'Repeat' mettere un limite di ripetizioni pari a ****
@@ -23,8 +21,7 @@ T o D o
 C o n s i d e r a z i o n i
 
 
-Il sito sta migliorando, niente di così eccessivo ma sta migliorando; in pochi giorni ho fatto molti progressi e spero di finire la pagina di timer.html in pochi giorni (Con responsive compreso).
-Azzarderei a dire che sono alla versione 0.9.
+Mi ero dimenticato di aggiornare questa parte, vabbè. Il sito sta procedendo molto bene, vorrei dedicare più tempo alla programmazione ma non riesco; la parte del timer è praticamente finita, devo rendere tutto responsive (non manca tantissimo) e poi posso passare al resto (teoricamente sarà tutto più facile, per il responsive posso basarmi sul timer e per il resto devo solo cambiare qualche id, qualche classe e controllare se funziona tutto). Spero che entro inizio Ottobre riesca a rilasciare la versione 1.
 
 
 
