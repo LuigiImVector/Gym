@@ -30,6 +30,12 @@ Mi ero dimenticato di aggiornare questa parte, vabbè. Il sito sta procedendo mo
 
 B r e a k p o i n t s
 
+Utilizzati:
+    480
+    1921
+    2560
+    3840
+
 Width:
     320
     375
