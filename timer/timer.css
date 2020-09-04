@@ -253,30 +253,81 @@ body { /* index.css */
     }
 }
 
-@media (min-width: 1921px)
+@media (min-width: 1921px)  /* Non so se lasciarlo */
 {
     #navbar {
-        color: red;
-        font-size: 80px;
+        font-size: 35px;
     }
 
     .timer-input-class {
-        width: 1000px;
-        height: 150px;
-        font-size: 40px;
+        width: 400px;
+        height: 65px;
+        font-size: 18px;
     }
 
     .timer-label-class {
+        font-size: 20px;
+    }
+
+    /* #repeat-checkbox {
+        transform: scale(2.5);
+        margin-top: 25px;
+    } */
+
+   #label-repeat-checkbox {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 2560px)
+{
+    #navbar {
         font-size: 50px;
     }
 
-    #repeat-checkbox {
-        transform: scale(2.5);
-        margin-top: 25px;
+    .timer-input-class {
+        width: 500px;
+        height: 90px;
+        font-size: 24px;
     }
 
+    .timer-label-class {
+        font-size: 28px;
+    }
+
+    /* #repeat-checkbox {
+        transform: scale(2.5);
+        margin-top: 25px;
+    } */
+
     #label-repeat-checkbox {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 3840px)
+{
+    #navbar {
+        font-size: 60px;
+    }
+
+    .timer-input-class {
+        width: 800px;
+        height: 125px;
+        font-size: 35px;
+    }
+
+    .timer-label-class {
         font-size: 40px;
+    }
+
+    /* #repeat-checkbox {
+        transform: scale(2.5);
+        margin-top: 25px;
+    } */
+
+    #label-repeat-checkbox {
+        font-size: 35px;
     }
 }
 
