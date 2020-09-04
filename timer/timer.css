@@ -12,6 +12,7 @@ html { /* index.css */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: black;
 }
 
 body { /* index.css */
@@ -218,10 +219,51 @@ body { /* index.css */
 
 /* Responsive */
 
+@media (max-width: 240px)
+{
+    #navbar {
+        font-size: 125px;
+    }
+
+    #timer-form {
+        margin-top: 20%
+    }
+
+    .timer-input-class {
+        width: 58%;
+        height: 35px;
+    }
+
+    .timer-label-class {
+        font-size: 15px;
+    }
+
+    #popup-timer {
+        height: 100%;    /* Credo */
+    }
+
+    #popup-number {
+        font-size: 150px;
+    }
+
+    #popup-status {
+        font-size: 16px;
+    }
+
+    #popup-numero-ripetizioni {
+        font-size: 12px;
+    }
+
+    .popup-button {
+        padding: 5px 15px;
+        font-size: 15px;    /* Anche 16px */
+    }
+
+}
+
 @media (max-width: 480px)
 {
-    #navbar
-    {
+    #navbar {
         font-size: 150%;
     }
 
