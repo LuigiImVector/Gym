@@ -24,6 +24,7 @@ var tempValue;
 var timerFormWidth;
 var inputWidth;
 var marginCheckbox;
+/* var test; */
 
 
 /* MarginLeft automatico: repeat-checkbox */
@@ -45,6 +46,8 @@ var marginCheckbox;
     document.getElementById("repeat-checkbox").style.marginLeft = marginCheckbox + "px";
 
 
+    
+
 
 
 /* Appena viene ridimensionata la pagina */
@@ -65,6 +68,12 @@ window.addEventListener('resize', function(event){
     marginCheckbox = (timerFormWidth-inputWidth)/2;
     document.getElementById("repeat-checkbox").style.marginLeft = marginCheckbox + "px";
 
+
+    /* element = document.getElementById("testone");
+    tempValue = window.getComputedStyle(element).getPropertyValue("width");
+    test = tempValue.replace(/[^0-9\.]+/g, "");
+    document.getElementById("navbar-login").innerHTML = test;
+ */
 });
 
 
@@ -237,6 +246,10 @@ function timer()
                     if (y==repeatValue && checkbox.checked == false)
                     {                
                         clearInterval(interval[intervalCounter]);
+                        /* if(window.matchMedia("(max-width: 700px)").matches)
+                        {
+                            document.getElementById("popup-number").style.fontSize = "90px";
+                        } */
                         document.getElementById("popup-number").innerHTML = "Fine";
                         document.getElementById("popup-timer").style.backgroundColor = "#05c848";
                         document.getElementById("popup-numero-ripetizioni").style.display = "none";

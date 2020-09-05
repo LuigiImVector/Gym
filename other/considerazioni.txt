@@ -1,6 +1,7 @@
 T o D o
 
 +Sistemare in responsive 'popup-timer'
++Responsive max-width e min-width --- contare l'error message
 +Sistemare il chechbox
 
 +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4)

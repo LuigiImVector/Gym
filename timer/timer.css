@@ -219,10 +219,10 @@ body { /* index.css */
 
 /* Responsive */
 
-@media (max-width: 240px)
+@media (min-width: 0px)
 {
     #navbar {
-        font-size: 125px;
+        font-size: 125%;
     }
 
     #timer-form {
@@ -239,11 +239,11 @@ body { /* index.css */
     }
 
     #popup-timer {
-        height: 100%;    /* Credo */
+        height: 100%;
     }
 
     #popup-number {
-        font-size: 150px;
+        font-size: 150px;   /* 90px quando c'è la scritta 'Fine' */
     }
 
     #popup-status {
