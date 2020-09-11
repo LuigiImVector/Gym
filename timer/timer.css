@@ -41,95 +41,7 @@ body { /* index.css */
     top: 0px;
 }
 
-#navbar { /* index.css */
-    height: 45px;
-    width: 100%;
-    font-size: 28px;
-    font-family: 'Quicksand', sans-serif;
-    position: absolute;
-}
 
-#navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */   
-    margin: 5px 0px 0px 12px;
-    float: left; 
-    text-decoration: none;
-    color: white;  
-}
-
-#navbar-login, #navbar-login:hover, #navbar-login:active, #navbar-login:visited, #navbar-login:focus { /* index.css */
-    margin: 5px 12px 0px 0px;
-    float: right;
-    text-align: right;
-    text-decoration: none;
-    color: white;
-}
-
-
-#timer-form{ 
-    display: block;
-    align-items: center;    
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    height: auto;
-    z-index: 2;
-}
-
-#timer-error-message {
-    display: none; /* Flex */
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 60px;
-    background-color: #F73434CF;
-    border: 0.5px solid #ff0000b8;
-    border-radius: 5px;
-    text-align: center;
-    margin:0px auto;
-    margin-bottom: 30px;
-    z-index: 4;
-}
-
-.timer-label-class {
-    display: block;
-    margin-bottom: 25px;
-    font-size: 18px;
-    font-family: 'Audiowide', cursive;
-    /* font-family: 'Quicksand', sans-serif; */
-    color: white;
-    /* text-shadow: 1px 3px #0b0b0b; */
-}
-
-.timer-input-class {
-    margin-bottom: 25px;
-    height: 55px;
-    width: 350px;
-    font-size: 16px
-}
-
-#repeat {
-    margin-bottom: 12px !important;
-}
-
-#div-repeat-checkbox {
-    display: block;
-    margin: 0;
-    margin-bottom: 25px;
-    text-align: left;
-    color: white;
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-size: 15px;
-}
-
-#repeat-checkbox {
-    margin: 0;
-    margin-left: 68px;
-}
-
-#label-repeat-checkbox {
-    position: relative;
-    top: -3px;
-}
 
 
 /* Nasconde le freccette per incrementare/decrementare il valore */
@@ -143,180 +55,212 @@ body { /* index.css */
     input[type=number] {
     -moz-appearance: textfield;
     }
+    #navbar { /* index.css */
+        height: 45px;
+        width: 100%;
+        font-size: 28px;
+        font-family: 'Quicksand', sans-serif;
+        position: absolute;
+    }
+    
+    #navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */   
+        margin: 5px 0px 0px 12px;
+        float: left; 
+        text-decoration: none;
+        color: white;  
+    }
+    
+    #navbar-login, #navbar-login:hover, #navbar-login:active, #navbar-login:visited, #navbar-login:focus { /* index.css */
+        margin: 5px 12px 0px 0px;
+        float: right;
+        text-align: right;
+        text-decoration: none;
+        color: white;
+    }
+    
+    
+    #timer-form{ 
+        display: block;
+        align-items: center;    
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+    }
+    
+    #timer-error-message {
+        display: none; /* Flex */
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 60px;
+        background-color: #F73434CF;
+        border: 0.5px solid #ff0000b8;
+        border-radius: 5px;
+        text-align: center;
+        margin:0px auto;
+        margin-bottom: 30px;
+        z-index: 4;
+    }
+    
+    .timer-label-class {
+        display: block;
+        margin-bottom: 25px;
+        font-size: 18px;
+        font-family: 'Audiowide', cursive;
+        /* font-family: 'Quicksand', sans-serif; */
+        color: white;
+        /* text-shadow: 1px 3px #0b0b0b; */
+    }
+    
+    .timer-input-class {
+        margin-bottom: 25px;
+        height: 55px;
+        width: 350px;
+        font-size: 16px
+    }
+    
+    #repeat {
+        margin-bottom: 12px !important;
+    }
+    
+    #div-repeat-checkbox {
+        display: block;
+        margin: 0;
+        margin-bottom: 25px;
+        text-align: left;
+        color: white;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-size: 15px;
+    }
+    
+    #repeat-checkbox {
+        margin: 0;
+        margin-left: 68px;
+    }
+    
+    #label-repeat-checkbox {
+        position: relative;
+        top: -3px;
+    }
+    #popup-timer {
+        display: block;
+        opacity: 0;
+        width: 98%;
+        height: 96%;
+        position: absolute;
+        background-color: #dfaa0a;
+        border-radius: 10px; 
+        text-align: center;
+        margin:0px auto;
+        left:0;
+        right:0;
+        top: 0;
+        bottom: 0;
+        margin-top: 1%;
+        transition: opacity 0.2s, visibility 200ms;
+        transition-duration: 0.6s;
+        z-index: 5;
+        overflow: auto;
+        visibility: hidden; /* Senza questo è come se ci fosse un box invisibile sopra ogni cosa e quindi non si può cliccare niente */
+    }
+    
+    #popup-number {
+        /* display: inline-block; */
+        font-family: 'Orbitron', sans-serif;
+        font-size: 400px;
+        margin-top: 5%;
+    }
+    
+    #popup-status {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 22px;
+    }
+    
+    #popup-back-again {
+        background-color: white;
+    }
+    
+    #popup-back-again:active {    
+      background-color: rgb(240, 240, 240);
+    
+    }
+    
+    #popup-numero-ripetizioni {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 20px;
+    }
+    
+    #popup-stop {
+        background-color: red; 
+    }
+    
+    #popup-stop:active {    
+        background-color: rgb(240, 0, 0);
+    
+    }
+    
+    .popup-button {
+        padding: 10px 30px;
+        border: none;
+        border-radius: 4px;
+        font-size: 25px;
+        color: black;
+        /* margin-top: 7%; */
+        margin-right: 1%;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #00000014;
+    }
 
-
-#popup-timer {
-    display: block;
-    opacity: 0;
-    width: 98%;
-    height: 96%;
-    position: absolute;
-    background-color: #dfaa0a;
-    border-radius: 10px; 
-    text-align: center;
-    margin:0px auto;
-    left:0;
-    right:0;
-    top: 0;
-    bottom: 0;
-    margin-top: 1%;
-    transition: opacity 0.2s, visibility 200ms;
-    transition-duration: 0.6s;
-    z-index: 5;
-    overflow: hidden;
-    visibility: hidden; /* Senza questo è come se ci fosse un box invisibile sopra ogni cosa e quindi non si può cliccare niente */
-}
-
-#popup-number {
-    /* display: inline-block; */
-    font-family: 'Orbitron', sans-serif;
-    font-size: 400px;
-    margin-top: 5%;
-}
-
-#popup-status {
-    display: block;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 22px;
-}
-
-#popup-back-again {
-    background-color: white;
-}
-
-#popup-back-again:active {    
-  background-color: rgb(240, 240, 240);
-
-}
-
-#popup-numero-ripetizioni {
-    display: block;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-}
-
-#popup-stop {
-    background-color: red; 
-}
-
-#popup-stop:active {    
-    background-color: rgb(240, 0, 0);
-
-}
-
-.popup-button {
-    padding: 10px 30px;
-    border: none;
-    border-radius: 4px;
-    font-size: 25px;
-    color: black;
-    margin-top: 7%;
-    margin-right: 1%;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    box-shadow: 1px 1px 1px 1px #00000014;
-}
 
 /* Responsive */
 
-@media (min-width: 0px)
+@media all and (max-width: 3840px)
 {
     #navbar {
-        font-size: 125%;
-    }
-
-    #timer-form {
-        margin-top: 20%
+        font-size: 60px;
     }
 
     .timer-input-class {
-        width: 58%;
-        height: 35px;
-    }
-
-    .timer-label-class {
-        font-size: 15px;
-    }
-
-    #popup-timer {
-        height: 100%;
-    }
-
-    #popup-number {
-        font-size: 150px;   /* 90px quando c'è la scritta 'Fine' */
-    }
-
-    #popup-status {
-        font-size: 16px;
-    }
-
-    #popup-numero-ripetizioni {
-        font-size: 12px;
-    }
-
-    .popup-button {
-        padding: 5px 15px;
-        font-size: 15px;    /* Anche 16px */
-    }
-
-}
-
-@media (max-width: 480px)
-{
-    #navbar {
-        font-size: 150%;
-    }
-
-
-    .timer-input-class {
-        width: 69%; /* Lucifer Estrella de la mañana */
-        height: 50px;
-        font-size: 15px;
-    }
-
-    .timer-label-class {
-        font-size: 17px;
-    }
-
-    #div-repeat-checkbox {
-        font-size: 15px;
-    }
-
-    #popup-number {
-        font-size: 300px;
-    }
-
-    #popup-stop {
-        margin-top: 28%;
-    }
-
-    #popup-back-again {
-        margin-top: 28%;
-    }
-}
-
-@media (min-width: 1921px)  /* Non so se lasciarlo */
-{
-    #navbar {
+        width: 800px;
+        height: 125px;
         font-size: 35px;
     }
 
-    .timer-input-class {
-        width: 400px;
-        height: 65px;
-        font-size: 18px;
-    }
-
     .timer-label-class {
-        font-size: 20px;
+        font-size: 40px;
     }
 
-   #label-repeat-checkbox {
-        font-size: 18px;
+    #label-repeat-checkbox {
+        font-size: 35px;
+    }
+
+    #popup-number {
+        font-size: 1100px;  /* Forse anche 1000px */
+    }
+
+    #popup-status {
+        font-size: 60px;    /* Forse anche 65px */
+    }
+
+    #popup-numero-ripetizioni {
+        font-size: 40px;    /* Forse anche 45px */
+    }
+
+    .popup-button {
+        padding: 30px 90px;
+        font-size: 45px;    /* Forse anche 50px */
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 2%;
     }
 }
 
-@media (min-width: 2560px)
+@media all and (max-width: 2560px)
 {
     #navbar {
         font-size: 50px;
@@ -355,41 +299,297 @@ body { /* index.css */
     }
 }
 
-@media (min-width: 3840px)
+@media all and (max-width: 2559px)
 {
     #navbar {
-        font-size: 60px;
+        font-size: 35px;
     }
 
     .timer-input-class {
-        width: 800px;
-        height: 125px;
-        font-size: 35px;
+        width: 400px;
+        height: 65px;
+        font-size: 18px;
     }
 
     .timer-label-class {
-        font-size: 40px;
+        font-size: 20px;
     }
 
+   #label-repeat-checkbox {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 1920px)
+{
+    #navbar { /* index.css */
+        height: 45px;
+        width: 100%;
+        font-size: 28px;
+        font-family: 'Quicksand', sans-serif;
+        position: absolute;
+    }
+    
+    #navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */   
+        margin: 5px 0px 0px 12px;
+        float: left; 
+        text-decoration: none;
+        color: white;  
+    }
+    
+    #navbar-login, #navbar-login:hover, #navbar-login:active, #navbar-login:visited, #navbar-login:focus { /* index.css */
+        margin: 5px 12px 0px 0px;
+        float: right;
+        text-align: right;
+        text-decoration: none;
+        color: white;
+    }
+    
+    
+    #timer-form{ 
+        display: block;
+        align-items: center;    
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+    }
+    
+    #timer-error-message {
+        display: none; /* Flex */
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 60px;
+        background-color: #F73434CF;
+        border: 0.5px solid #ff0000b8;
+        border-radius: 5px;
+        text-align: center;
+        margin:0px auto;
+        margin-bottom: 30px;
+        z-index: 4;
+    }
+    
+    .timer-label-class {
+        display: block;
+        margin-bottom: 25px;
+        font-size: 18px;
+        font-family: 'Audiowide', cursive;
+        /* font-family: 'Quicksand', sans-serif; */
+        color: white;
+        /* text-shadow: 1px 3px #0b0b0b; */
+    }
+    
+    .timer-input-class {
+        margin-bottom: 25px;
+        height: 55px;
+        width: 350px;
+        font-size: 16px
+    }
+    
+    #repeat {
+        margin-bottom: 12px !important;
+    }
+    
+    #div-repeat-checkbox {
+        display: block;
+        margin: 0;
+        margin-bottom: 25px;
+        text-align: left;
+        color: white;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-size: 15px;
+    }
+    
+    #repeat-checkbox {
+        margin: 0;
+        margin-left: 68px;
+    }
+    
     #label-repeat-checkbox {
-        font-size: 35px;
+        position: relative;
+        top: -3px;
+        font-size: 15px;
+    }
+    #popup-timer {
+        display: block;
+        opacity: 0;
+        width: 98%;
+        height: 96%;
+        position: absolute;
+        background-color: #dfaa0a;
+        border-radius: 10px; 
+        text-align: center;
+        margin:0px auto;
+        left:0;
+        right:0;
+        top: 0;
+        bottom: 0;
+        margin-top: 1%;
+        transition: opacity 0.2s, visibility 200ms;
+        transition-duration: 0.6s;
+        z-index: 5;
+        overflow: auto;
+        visibility: hidden; /* Senza questo è come se ci fosse un box invisibile sopra ogni cosa e quindi non si può cliccare niente */
+    }
+    
+    #popup-number {
+        /* display: inline-block; */
+        font-family: 'Orbitron', sans-serif;
+        font-size: 400px;
+        margin-top: 5%;
+    }
+    
+    #popup-status {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 22px;
+    }
+    
+    #popup-back-again {
+        background-color: white;
+    }
+    
+    #popup-back-again:active {    
+      background-color: rgb(240, 240, 240);
+    
+    }
+    
+    #popup-numero-ripetizioni {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 20px;
+    }
+    
+    #popup-stop {
+        background-color: red; 
+    }
+    
+    #popup-stop:active {    
+        background-color: rgb(240, 0, 0);
+    
+    }
+    
+    .popup-button {
+        padding: 10px 30px;
+        border: none;
+        border-radius: 4px;
+        font-size: 25px;
+        color: black;
+        /* margin-top: 7%; */
+        margin-right: 1%;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #00000014;
+    }
+}
+
+
+
+@media all and (max-width: 480px)
+{
+    #navbar {
+        font-size: 150%;
+    }
+
+
+    .timer-input-class {
+        width: 69%; /* Lucifer Estrella de la mañana */
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .timer-label-class {
+        font-size: 17px;
+    }
+
+    #div-repeat-checkbox {
+        font-size: 15px;
     }
 
     #popup-number {
-        font-size: 1100px;  /* Forse anche 1000px */
+        font-size: 300px;
+    }
+
+    /* .popup-button {
+        margin-top: 28%;
+    } */
+}
+
+
+@media all and (max-width: 240px)
+{
+    #navbar {
+        font-size: 125%;
+    }
+
+    #timer-form {
+        margin-top: 20%;
+    }
+
+    .timer-input-class {
+        width: 58%;
+        height: 35px;
+    }
+
+    .timer-label-class {
+        font-size: 15px;
+    }
+
+    #popup-timer {
+        height: 100%;
+    }
+
+    #popup-number {
+        font-size: 150px;   /* 90px quando c'è la scritta 'Fine' */
     }
 
     #popup-status {
-        font-size: 60px;    /* Forse anche 65px */
+        font-size: 16px;
     }
 
     #popup-numero-ripetizioni {
-        font-size: 40px;    /* Forse anche 45px */
+        font-size: 12px;
     }
 
     .popup-button {
-        padding: 30px 90px;
-        font-size: 45px;    /* Forse anche 50px */
-        margin-top: 5%;
+        padding: 5px 15px;
+        font-size: 15px;    /* Anche 16px */
+        /* margin-top: 14%; */
     }
+
 }
+
+/* @media all and (max-height: 240px)
+{
+    #timer-form {
+        margin-top: 15%;
+    }
+
+    .timer-input-class {
+        margin-bottom: 4%;
+    }
+
+    #popup-timer {
+        height: 100%;
+    }
+
+    #popup-number {
+        font-size: 100px;
+    }
+
+    #popup-status {
+        font-size: 20px;
+    }
+
+    #popup-numero-ripetizioni {
+        font-size: 18px;
+    }
+
+    .popup-button {
+        padding: 3px 9px;
+        font-size: 18px;
+        margin-top: 2%;
+    }
+} */
