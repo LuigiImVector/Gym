@@ -82,8 +82,10 @@ document.getElementById("repeat-checkbox").onclick = function () {
     if (document.getElementById("repeat-checkbox").checked == true)
     {
         document.getElementById("repeat").disabled = true;
+        document.getElementById("repeat").style.cursor = "no-drop";
     } else {
         document.getElementById("repeat").disabled = false;
+        document.getElementById("repeat").style.cursor = "text";
     }
 
     repeatInput.value = ''; /* Elimina i valori presenti nell'input box 'repeat' */
@@ -93,6 +95,7 @@ document.getElementById("repeat-checkbox").onclick = function () {
 if (document.getElementById("repeat-checkbox").checked == true)
 {
     document.getElementById("repeat").disabled = true;
+    document.getElementById("repeat").style.cursor = "no-drop";
 }
 
 
