@@ -1,7 +1,7 @@
 /* Counter */
 var x = 0;
 var y = 0;
-var numeroRipetizioni = 0; /* Nome variabile da modificare (forse) */
+var numeroRipetizioni = 0;
 var counterPreTimer = 3; 
 var restCounter = 0;
 var intervalCounter = 0;
@@ -23,13 +23,13 @@ var element;
 var tempValue;
 var timerFormWidth;
 var inputWidth;
+var popupButtonHeight;
 var marginCheckbox;
-/* var test; */
 
-
-/* MarginLeft automatico: repeat-checkbox */
 
 /* Appena la pagina viene caricata */
+
+/* MarginLeft automatico: repeat-checkbox */
     /* Valore: timer-form */
     element = document.getElementById("timer-form");
     tempValue = window.getComputedStyle(element).getPropertyValue("width");
@@ -47,9 +47,6 @@ var marginCheckbox;
 
 
     
-
-
-
 /* Appena viene ridimensionata la pagina */
 window.addEventListener('resize', function(event){
 
@@ -68,12 +65,11 @@ window.addEventListener('resize', function(event){
     marginCheckbox = (timerFormWidth-inputWidth)/2;
     document.getElementById("repeat-checkbox").style.marginLeft = marginCheckbox + "px";
 
-
-    /* element = document.getElementById("testone");
-    tempValue = window.getComputedStyle(element).getPropertyValue("width");
-    test = tempValue.replace(/[^0-9\.]+/g, "");
-    document.getElementById("navbar-login").innerHTML = test;
- */
+    /* Valore: popup-button */  
+        element = document.getElementById("popup-stop");
+        popupButtonHeight = window.getComputedStyle(element).getPropertyValue("height");
+        document.getElementById("popup-div-button").style.height = popupButtonHeight;
+    
 });
 
 
@@ -90,6 +86,7 @@ document.getElementById("repeat-checkbox").onclick = function () {
 
     repeatInput.value = ''; /* Elimina i valori presenti nell'input box 'repeat' */
 }
+
 
 /* Se viene riavviata la pagina e il checkbox rimane "checkato" anche il box input 'repeat' rimane disabilitato */
 if (document.getElementById("repeat-checkbox").checked == true)
@@ -178,6 +175,12 @@ function timer()
         document.getElementById("timer-error-message").style.display = "none";
         document.getElementById("popup-timer").style.opacity = "1";
         document.getElementById("popup-timer").style.visibility = "visible";
+
+        /* Altezza automatica: popup-div-button */
+        /* Valore: popup-button */
+        element = document.getElementById("popup-stop");
+        popupButtonHeight = window.getComputedStyle(element).getPropertyValue("height");
+        document.getElementById("popup-div-button").style.height = popupButtonHeight;
 
         /* Timer */
       

@@ -3,11 +3,11 @@
     <head>
         <title>Gym</title>
         <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" type="text/css" href="login.css">
-        <link rel="stylesheet" type="text/css" href="register.css">
+        <link rel="stylesheet" type="text/css" href="timer/timer.css">
         
         <meta charset="utf-8">
         <meta name="language" content="IT">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"> 
@@ -16,9 +16,64 @@
         <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     </head>
 
-    <body id="homePage">
+    <body>
+
+        <div id="background-image"></div>
+
+        <header id="navbar">
+            <a href=""><div id="navbar-title" class="noPosition">Gym &#128170</div></a>
+            <a href=""><div id="navbar-login" class="noPosition">Login</div></a>
+        </header>
+
 <!--  -->
         <!-- Home Page -->
+        <div id="timerPage">
+
+                <div id="timer-form">
+                        <div id="timer-error-message">Error message</div>
+        
+        
+                        <div>
+                            <label for="time" class="timer-label-class">Time</label>
+                            <input type="number" id="time" class="timer-input-class" name="time" placeholder="Time">
+                        </div>
+        
+                        <div>
+                            <label for="rest" class="timer-label-class">Pausa</label>
+                            <input type="number" id="rest" class="timer-input-class" name="rest" placeholder="Pausa">
+                        </div>
+        
+                        <div>
+                            <label for="repeat" class="timer-label-class">Repeat</label>
+                            <input type="number" id="repeat" class="timer-input-class" name="repeat" placeholder="Repeat timer">
+        
+                            <div id="div-repeat-checkbox">
+                                <input name="repeat-checkbox" value="0" type="hidden">
+                                <input type="checkbox" id="repeat-checkbox" name="repeat-checkbox" value="0">
+                                <label for="repeat-checkbox" id="label-repeat-checkbox">Ripeti per sempre</label>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <input type="submit" id="timer-submit" class="timer-input-class" name="timer-submit" value="Invia">
+                        </div>
+                </div>
+        
+                <div id="popup-timer" class="noPosition">
+                    <div id="popup-number">3</div>
+                    <div id="popup-status">Pre-Timer</div>
+                    <div id="popup-numero-ripetizioni">0</div>
+                    <div id="popup-div-button" class="noPosition">
+                        <input id="popup-back-again" class="popup-button" type="submit" name="popup-back-again" value="Rifai"> <!-- Modificare -->
+                        <input id="popup-stop" class="popup-button" type="submit" name="popup-stop" value="Stop">
+                    </div>
+                </div>
+
+        </div>
+
+
+
+
 <!--  -->
         
         
@@ -34,6 +89,7 @@
 <!--  -->
         
 
-        <!-- <script type="text/javascript" src="index.js"></script> -->
+
+        <script type="text/javascript" src="timer/timer.js"></script>
     </body>
 </html> 

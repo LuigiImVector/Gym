@@ -1,6 +1,6 @@
 T o D o
 
-
++Modificare questa pagina
 
 +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4)
 +In 'Repeat' mettere un limite di ripetizioni pari a ****

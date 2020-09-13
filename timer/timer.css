@@ -1,4 +1,5 @@
-body, html { /* index.css */
+#timerPage {
+    display: flex;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -6,79 +7,8 @@ body, html { /* index.css */
     background-color: black;
 }
 
-html { /* index.css */
-    background: url(/opt/lampp/htdocs/Gym/img/gym-background.jpg);
-    max-width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
-}
-
-body { /* index.css */
-    display: flex;
-    /* background: #000; */
-}
-
-#background-image { /* index.css FORSE */
-    background: url(/opt/lampp/htdocs/Gym/img/gym-background.jpg);
-    max-width: 100%;
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(2px);
-    position: absolute;
-    z-index: 0;
-}
 
 
-.noPosition { /* index.css */
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-    top: 0px;
-}
-
-/* Nasconde le freccette per incrementare/decrementare il valore */
-    /* Chrome, Safari, Edge, Opera */
-    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-    }
-
-    /* Firefox */
-    input[type=number] {
-    -moz-appearance: textfield;
-    }
-/*  */
-
-#navbar { /* index.css */
-    height: 45px;
-    width: 100%;
-    font-size: 28px;
-    font-family: 'Quicksand', sans-serif;
-    position: absolute;
-}
-    
-#navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */   
-    margin: 5px 0px 0px 12px;
-    float: left; 
-    text-decoration: none;
-    color: white;  
-}
-    
-#navbar-login, #navbar-login:hover, #navbar-login:active, #navbar-login:visited, #navbar-login:focus { /* index.css */
-    margin: 5px 12px 0px 0px;
-    float: right;
-    text-align: right;
-    text-decoration: none;
-    color: white;
-}
-
-    
-    
 #timer-form { 
     display: block;
     align-items: center;    
