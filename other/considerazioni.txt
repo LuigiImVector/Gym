@@ -1,9 +1,5 @@
 T o D o
 
-+Sistemare in responsive 'popup-timer'
-+Controllare se #popup-button funzioni sempre
-+cursor:notalowed quando l'input box è disattivato
-+Responsive max-width e min-width --- contare l'error message
 
 
 +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4)

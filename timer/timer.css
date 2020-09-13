@@ -41,9 +41,6 @@ body { /* index.css */
     top: 0px;
 }
 
-
-
-
 /* Nasconde le freccette per incrementare/decrementare il valore */
     /* Chrome, Safari, Edge, Opera */
     input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
@@ -55,186 +52,189 @@ body { /* index.css */
     input[type=number] {
     -moz-appearance: textfield;
     }
-    #navbar { /* index.css */
-        height: 45px;
-        width: 100%;
-        font-size: 28px;
-        font-family: 'Quicksand', sans-serif;
-        position: absolute;
-    }
+/*  */
+
+#navbar { /* index.css */
+    height: 45px;
+    width: 100%;
+    font-size: 28px;
+    font-family: 'Quicksand', sans-serif;
+    position: absolute;
+}
     
-    #navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */   
-        margin: 5px 0px 0px 12px;
-        float: left; 
-        text-decoration: none;
-        color: white;  
-    }
+#navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */   
+    margin: 5px 0px 0px 12px;
+    float: left; 
+    text-decoration: none;
+    color: white;  
+}
     
-    #navbar-login, #navbar-login:hover, #navbar-login:active, #navbar-login:visited, #navbar-login:focus { /* index.css */
-        margin: 5px 12px 0px 0px;
-        float: right;
-        text-align: right;
-        text-decoration: none;
-        color: white;
-    }
+#navbar-login, #navbar-login:hover, #navbar-login:active, #navbar-login:visited, #navbar-login:focus { /* index.css */
+    margin: 5px 12px 0px 0px;
+    float: right;
+    text-align: right;
+    text-decoration: none;
+    color: white;
+}
+
     
     
-    #timer-form{ 
-        display: block;
-        align-items: center;    
-        text-align: center;
-        margin: auto;
-        width: 100%;
-        height: auto;
-        z-index: 2;
-    }
+#timer-form { 
+    display: block;
+    align-items: center;    
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
     
-    #timer-error-message {
-        display: none; /* Flex */
-        justify-content: center;
-        align-items: center;
-        width: 500px;
-        height: 60px;
-        background-color: #F73434CF;
-        border: 0.5px solid #ff0000b8;
-        border-radius: 5px;
-        text-align: center;
-        margin:0px auto;
-        margin-bottom: 30px;
-        z-index: 4;
-    }
+#timer-error-message {
+    display: none; /* Flex */
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 60px;
+    font-size: 16px;
+    background-color: #F73434CF;
+    border: 0.5px solid #ff0000b8;
+    border-radius: 5px;
+    text-align: center;
+    margin:0px auto;
+    margin-bottom: 30px;
+    z-index: 4;
+}
     
-    .timer-label-class {
-        display: block;
-        margin-bottom: 25px;
-        font-size: 18px;
-        font-family: 'Audiowide', cursive;
-        /* font-family: 'Quicksand', sans-serif; */
-        color: white;
-        /* text-shadow: 1px 3px #0b0b0b; */
-    }
+.timer-label-class {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-family: 'Audiowide', cursive;
+    /* font-family: 'Quicksand', sans-serif; */
+    color: white;
+    /* text-shadow: 1px 3px #0b0b0b; */
+}
     
-    .timer-input-class {
-        margin-bottom: 25px;
-        height: 55px;
-        width: 350px;
-        font-size: 16px
-    }
+.timer-input-class {
+    margin-bottom: 25px;
+    height: 55px;
+    width: 350px;
+    font-size: 16px
+}
     
-    #repeat {
-        margin-bottom: 12px !important;
-        /*
-            cursor: text;   Al posto di 'no-drop' va bene anche 'not-allowed'
-        */
-    }
+#repeat {
+    margin-bottom: 12px !important;
+    /*
+        cursor: text;   Al posto di 'no-drop' va bene anche 'not-allowed'
+    */
+}
     
-    #div-repeat-checkbox {
-        display: block;
-        margin: 0;
-        margin-bottom: 25px;
-        text-align: left;
-        color: white;
-        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-        font-size: 15px;
-    }
+#div-repeat-checkbox {
+    display: block;
+    margin: 0;
+    margin-bottom: 25px;
+    text-align: left;
+    color: white;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 15px;
+}
     
-    #repeat-checkbox {
-        margin: 0;
-        margin-left: 68px;
-    }
+#repeat-checkbox {
+    margin: 0;
+    margin-left: 68px;
+}
     
-    #label-repeat-checkbox {
-        position: relative;
-        top: -3px;
-    }
-    #popup-timer {
-        display: block;
-        opacity: 0;
-        width: 98%;
-        height: 96%;
-        position: absolute;
-        background-color: #dfaa0a;
-        border-radius: 10px; 
-        text-align: center;
-        margin:0px auto;
-        left:0;
-        right:0;
-        top: 0;
-        bottom: 0;
-        margin-top: 1%;
-        transition: opacity 0.2s, visibility 200ms;
-        transition-duration: 0.6s;
-        z-index: 5;
-        overflow: auto;
-        visibility: hidden; /* Senza questo è come se ci fosse un box invisibile sopra ogni cosa e quindi non si può cliccare niente */
-    }
+#label-repeat-checkbox {
+    position: relative;
+    top: -3px;
+}
+
+#popup-timer {
+    display: block;
+    opacity: 0;
+    width: 98%;
+    height: 96%;
+    position: absolute;
+    background-color: #dfaa0a;
+    border-radius: 10px; 
+    text-align: center;
+    margin:0px auto;
+    margin-top: 1%;
+    transition: opacity 0.2s, visibility 200ms;
+    transition-duration: 0.6s;
+    z-index: 5;
+    overflow: auto;
+    visibility: hidden; /* Senza questo è come se ci fosse un box invisibile sopra ogni cosa e quindi non si può cliccare niente */
+}
     
-    #popup-number {
-        /* display: inline-block; */
-        font-family: 'Orbitron', sans-serif;
-        font-size: 400px;
-        margin-top: 5%;
-    }
+#popup-number {
+    /* display: inline-block; */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 400px;
+    margin-top: 5%;
+}
     
-    #popup-status {
-        display: block;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 22px;
-    }
+#popup-status {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+}
     
-    #popup-back-again {
+#popup-back-again {
         background-color: white;
     }
     
-    #popup-back-again:active {    
-      background-color: rgb(240, 240, 240);
+#popup-back-again:active {    
+    background-color: rgb(240, 240, 240);
+}
     
-    }
-    
-    #popup-numero-ripetizioni {
-        display: block;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 20px;
-    }
+#popup-numero-ripetizioni {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+}
 
-    #popup-button {
-        display: inline-block;
-        width: 100%;
-        height: 55px;   /* Bisogna modificarlo in base alla vera altezza dei pulsanti */
-        position: absolute;
-        margin: auto auto 0px auto !important;  /* margin: top right bottom left */
-        margin-bottom: 20px !important;     /* Valore da modificare */
-    }
+#popup-div-button {
+    display: inline-block;
+    width: 100%;
+    height: 55px;   /* Bisogna modificarlo in base alla vera altezza dei pulsanti */
+    position: absolute;
+    margin: auto auto 0px auto !important;
+    margin-bottom: 3% !important;
+}
     
-    #popup-stop {
-        background-color: red; 
-    }
+#popup-stop {
+    background-color: red; 
+}
+
+#popup-stop:active {    
+    background-color: rgb(240, 0, 0);
+}
     
-    #popup-stop:active {    
-        background-color: rgb(240, 0, 0);
-    
-    }
-    
-    .popup-button {
-        padding: 10px 30px;
-        border: none;
-        border-radius: 4px;
-        font-size: 25px;
-        color: black;
-        /* margin-top: 7%; */
-        margin-right: 1%;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        box-shadow: 1px 1px 1px 1px #00000014;
-    }
+.popup-button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 25px;
+    color: black;
+    margin-right: 1%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #00000014;
+}
 
 
 /* Responsive */
-
 @media all and (max-width: 3840px)
 {
     #navbar {
         font-size: 60px;
+    }
+
+    #timer-error-message {
+        width: 1000px;
+        height: 100px;
+        font-size: 30px;
     }
 
     .timer-input-class {
@@ -275,6 +275,12 @@ body { /* index.css */
         font-size: 50px;
     }
 
+    #timer-error-message {
+        width: 800px;
+        height: 80px;
+        font-size: 25px;
+    }
+
     .timer-input-class {
         width: 500px;
         height: 90px;
@@ -304,7 +310,6 @@ body { /* index.css */
     .popup-button {
         padding: 20px 60px;     /* Anche 20px 80px ci sta però non si mantiene la proporzione 1-3 */
         font-size: 32px;
-        /* margin-top: 6%;  Forse */
     }
 }
 
@@ -312,6 +317,12 @@ body { /* index.css */
 {
     #navbar {
         font-size: 35px;
+    }
+
+    #timer-error-message {
+        width: 600px;
+        height: 70px;
+        font-size: 20px;
     }
 
     .timer-input-class {
@@ -331,30 +342,14 @@ body { /* index.css */
 
 @media all and (max-width: 1920px)
 {
-    #navbar { /* index.css */
+    #navbar {
         height: 45px;
         width: 100%;
         font-size: 28px;
         font-family: 'Quicksand', sans-serif;
         position: absolute;
     }
-    
-    #navbar-title, #navbar-title:hover, #navbar-title:active, #navbar-title:visited, #navbar-title:focus { /* index.css */   
-        margin: 5px 0px 0px 12px;
-        float: left; 
-        text-decoration: none;
-        color: white;  
-    }
-    
-    #navbar-login, #navbar-login:hover, #navbar-login:active, #navbar-login:visited, #navbar-login:focus { /* index.css */
-        margin: 5px 12px 0px 0px;
-        float: right;
-        text-align: right;
-        text-decoration: none;
-        color: white;
-    }
-    
-    
+        
     #timer-form{ 
         display: block;
         align-items: center;    
@@ -371,6 +366,7 @@ body { /* index.css */
         align-items: center;
         width: 500px;
         height: 60px;
+        font-size: 16px;
         background-color: #F73434CF;
         border: 0.5px solid #ff0000b8;
         border-radius: 5px;
@@ -486,7 +482,6 @@ body { /* index.css */
         border-radius: 4px;
         font-size: 25px;
         color: black;
-        /* margin-top: 7%; */
         margin-right: 1%;
         transition-duration: 0.4s;
         cursor: pointer;
@@ -494,7 +489,66 @@ body { /* index.css */
     }
 }
 
+@media all and (max-width: 1024px) and (max-height: 1440px)
+{
+    #navbar {
+        font-size: 30px;
+    }
 
+    #timer-error-message {
+        width: 500px;
+        height: 75px;
+        font-size: 25px;
+    }
+
+    .timer-label-class {
+        font-size: 22px;
+    }
+
+    .timer-input-class {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    #label-repeat-checkbox {
+        font-size: 17px;
+    }
+
+    #popup-number {
+        font-size: 600px;
+        margin-top: 0px;
+    }
+
+    #popup-status {
+        font-size: 35px;
+    }
+
+    #popup-numero-ripetizioni {
+        font-size: 30px;
+    }
+
+    #popup-div-button {
+        margin-bottom: 5% !important;
+    }
+
+    .popup-button {
+        padding: 12px 36px;
+        font-size: 30px;
+    }
+}
+
+@media all and (max-width: 1440px)
+{
+    #timer-error-message {
+        width: 500px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    #popup-number {
+        margin-top: 0px;
+    }
+}
 
 @media all and (max-width: 480px)
 {
@@ -502,6 +556,12 @@ body { /* index.css */
         font-size: 150%;
     }
 
+    #timer-error-message {
+        width: 350px;
+        height: 60px;   /* Anche 55px */
+        font-size: 16px;    /* Anche 15px */
+        margin-top: 10%;
+    }
 
     .timer-input-class {
         width: 69%; /* Lucifer Estrella de la mañana */
@@ -517,15 +577,44 @@ body { /* index.css */
         font-size: 15px;
     }
 
-    #popup-number {
-        font-size: 300px;
+    #label-repeat-checkbox {
+        font-size: 15px;
     }
 
-    /* .popup-button {
-        margin-top: 28%;
-    } */
+    #popup-number {
+        font-size: 250px;
+    }
+
+    #popup-status {
+        font-size: 22px;
+    }
+
+    #popup-numero-ripetizioni {
+        font-size: 20px;
+    }
+    
+    .popup-button {
+        padding: 10px 30px;
+        font-size: 25px;
+    }
 }
 
+@media all and (max-width: 320px)
+{
+    #timer-form {
+        margin-top: 20%;
+    }
+
+    #timer-error-message {
+        width: 275px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .popup-button {
+        font-size: 18px;
+    }
+}
 
 @media all and (max-width: 240px)
 {
@@ -535,6 +624,14 @@ body { /* index.css */
 
     #timer-form {
         margin-top: 20%;
+    }
+
+    #timer-error-message {
+        width: 200px;
+        height: 45px;
+        font-size: 10px;
+        margin-top: 5%;
+        margin-bottom: 15px;
     }
 
     .timer-input-class {
@@ -565,40 +662,6 @@ body { /* index.css */
     .popup-button {
         padding: 5px 15px;
         font-size: 15px;    /* Anche 16px */
-        /* margin-top: 14%; */
     }
 
 }
-
-/* @media all and (max-height: 240px)
-{
-    #timer-form {
-        margin-top: 15%;
-    }
-
-    .timer-input-class {
-        margin-bottom: 4%;
-    }
-
-    #popup-timer {
-        height: 100%;
-    }
-
-    #popup-number {
-        font-size: 100px;
-    }
-
-    #popup-status {
-        font-size: 20px;
-    }
-
-    #popup-numero-ripetizioni {
-        font-size: 18px;
-    }
-
-    .popup-button {
-        padding: 3px 9px;
-        font-size: 18px;
-        margin-top: 2%;
-    }
-} */
