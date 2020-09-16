@@ -1,26 +1,83 @@
+---------------
+ |   G y m   |
+---------------
+
+
 T o D o
 
-+Modificare questa pagina
+[LOGIN PAGE]
 
-+In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4)
-+In 'Repeat' mettere un limite di ripetizioni pari a ****
+Ora:
+    +Controllare i codici (Html, Css e Php);
+    +Ricreare la tabella nel DataBase;
+    +Rifare la pagina con tag nuovi;
+    +Margine automatico per il checkbox;
+    +Aggiustare label nel checkbox;
+    +Scrivere nuove tasks.
 
-+Cambiare metodo per registrarsi/entrare, quello attuale fa pena, si confonde con il timer
-+Finire metodo Login
-+Autenticandosi si verrà portati in una pagina in cui sarà possibile scrivere qualsiasi cosa si voglia.
+Dopo:
+    ///
+    
 
-+Aggiungere un tasto 'Pausa' nel timer
-+In base al tempo mancante lo sfondo cambia - Sarebbe bello che il colore dello sfondo-Lavoro cambiasse fino a diventare quello dello sfondo-Riposo (Magari per evitare che la persona si confonda si può fare che lo sfondo di quando manca 1 secondo alla fine del timer-Lavoro sia simile ma non uguale allo sfondo-Riposo) [Dopo la versione 1.0]
-+Pulsante-testo 'Funzioni aggiuntive'//'Altro' [Dopo la versione 1.0 - Forse] || Esercizio 1 questo tempo, Esercizio 2 quest'altro ...
-+Creare pannello di controllo [Dopo la versione 1.0]
-+Sistemare il chechbox (forse)
+Forse:
+    ///
+    
+    
 
+[REGISTER PAGE]
+
+Ora:
+    +Controllare i codici (Html, Css e Php);
+    +Ricreare la tabella nel DataBase;
+    +Rifare la pagina con tag nuovi;
+    +Margine automatico per il checkbox;
+    +Aggiustare label nel checkbox;
+    +Scrivere nuove tasks;
+    +Confirm email;
+    +Confirm email e confirm password compariranno solamente quando verrà inserita (correttamente) la mail/password.
+
+Dopo:
+    ///
+    
+
+Forse:
+    ///
+    
+
+
+[TIMER PAGE]
+
+Ora:
+    +[SE NON C'È GIÀ] Far lasciare lo schermo attivo nel telefono quando c'è il timer attivo OPPURE metterlo in background (non devo per forza vedere quanti secondi mancano, basta che si sentano i rumori al momento giusto).
+
+Dopo:
+    +Aggiungere un tasto 'Pausa' nel timer.
+
+
+Forse:
+    +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4);
+    +In 'Repeat' mettere un limite di ripetizioni pari a ****;
+    +In base al tempo mancante lo sfondo cambia - Sarebbe bello che il colore dello sfondo-Lavoro cambiasse fino a diventare quello dello sfondo-Riposo (Magari per evitare che la persona si confonda si può fare che lo sfondo di quando manca 1 secondo alla fine del timer-Lavoro sia simile ma non uguale allo sfondo-Riposo);
+    +Pulsante-testo 'Funzioni aggiuntive'//'Altro' [Dopo la versione 1.0 - Forse] || Esercizio 1 questo tempo, Esercizio 2 quest'altro ...
+
+    
+
+[OTHER]
+
+    +Sistemare il chechbox;
+    +Cambiare metodo per registrarsi/entrare, quello attuale fa pena, si confonde con il timer;
+    +Autenticandosi si verrà portati in una pagina in cui sarà possibile scrivere qualsiasi cosa si voglia;
+    +Creare pannello di controllo per l'account (magari anche un'immagine profilo).
+
+
+    
 -
 
 C o n s i d e r a z i o n i
 
 
-Mi ero dimenticato di aggiornare questa parte, vabbè. Il sito sta procedendo molto bene, vorrei dedicare più tempo alla programmazione ma non riesco; la parte del timer è praticamente finita, devo rendere tutto responsive (non manca tantissimo) e poi posso passare al resto (teoricamente sarà tutto più facile, per il responsive posso basarmi sul timer e per il resto devo solo cambiare qualche id, qualche classe e controllare se funziona tutto). Spero che entro inizio Ottobre riesca a rilasciare la versione 1.
+Finalmente ho finito completamente la pagine del Timer, responsive compreso, wow. Ora mi manca solo da finire la parte di login e register, per fortuna non dovrei impiegarci troppo dato che è praticamente tutto già fatto. Credo che questa sia la versione 0.9. Appena mi arrivano le credenziali metterò il timer online (altervista) in modo da poterlo utilizzare da telefono quando mi alleno fuori casa. Quello che sta uscendo fuori fa schifo, mi piace questa cosa.
+Ancora non mi convince il modo in cui compaiano i form di Login/Register, dovrò pensare a qualcosa.
 
 
 
@@ -29,22 +86,18 @@ Mi ero dimenticato di aggiornare questa parte, vabbè. Il sito sta procedendo mo
 
 B r e a k p o i n t s
 
-Utilizzati:
-    480
-    1921
-    2560
-    3840
+3840px
+2560px
+2559px
+1920px
+1024px*1440px   /Larghezza*Altezza/
+480px
+320px
+240px
 
-Width:
-    320
-    375
-    425
-    768
-    1024
-    1440
-    (1920)
-    2560
-    3840
+(Sono tutti max-width e sono messi nell'ordine giusto)
+
+
 
 -
 
@@ -52,9 +105,9 @@ C o l o r i
 
 
 Verde - #09bd47
-Verde leggermente più chiaro - #05c848
-Azzurro - #09bdbd
-Giallo - #dfaa0a
+Verde leggermente più chiaro - #05c848 [Status: Fine]
+Azzurro - #09bdbd [Status: Lavoro]
+Giallo - #dfaa0a [Status: Riposo]
 
 -
 
