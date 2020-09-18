@@ -2,6 +2,8 @@
  |   G y m   |
 ---------------
 
+gymtimer.altervista.org/
+
 
 T o D o
 
@@ -58,7 +60,8 @@ Forse:
     +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4);
     +In 'Repeat' mettere un limite di ripetizioni pari a ****;
     +In base al tempo mancante lo sfondo cambia - Sarebbe bello che il colore dello sfondo-Lavoro cambiasse fino a diventare quello dello sfondo-Riposo (Magari per evitare che la persona si confonda si può fare che lo sfondo di quando manca 1 secondo alla fine del timer-Lavoro sia simile ma non uguale allo sfondo-Riposo);
-    +Pulsante-testo 'Funzioni aggiuntive'//'Altro' [Dopo la versione 1.0 - Forse] || Esercizio 1 questo tempo, Esercizio 2 quest'altro ...
+    +Pulsante-testo 'Funzioni aggiuntive'//'Altro' [Dopo la versione 1.0 - Forse] || Esercizio 1 questo tempo, Esercizio 2 quest'altro ...;
+    +Il valore della pausa può essere 0.
 
     
 
