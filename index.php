@@ -9,9 +9,11 @@
         die("Si è verificato un errore, riprovare più tardi.");
     }
 
+    print("Ciao");
+
     include("index.html");
     
-    include("login.php");
+    //include("login.php");
     /* include("register.php"); */
 ?>
 
