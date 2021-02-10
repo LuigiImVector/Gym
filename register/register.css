@@ -6,11 +6,11 @@
 }
 
 #thirdPage {
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /*display: none;*/
 }
 
-#div-form {
+#register-form {
     align-items: center;    
     text-align: center;
     margin: auto;
@@ -22,7 +22,7 @@
 }
 
 #error-message {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 500px;

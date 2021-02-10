@@ -14,40 +14,41 @@
         <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
     </head>
     <body id="thirdPage">
-        <div id="div-form">
-            <!-- <div id="error-message"> -->
+        <div id="register-form">
+            <div id="error-message">
                 <?php
                     echo $error;
                 ?>
-            <!-- </div> -->
+            </div>
 
-            <form action="index.php" id="form" method="POST">
+            <form action="register.php" id="form" method="POST" onsubmit="return Validazione();">
                 <div>
-                    <label for="email" class="label-class">Email</label>
-                    <input type="email" id="email" class="input-class" name="email">
+                    <label for="register-email" class="label-class">Email</label>
+                    <input type="email" id="register-email" class="input-class" name="register-email">
                 </div>
 
                 <div>
-                    <label for="password" class="label-class">Password</label>
-                    <input type="password" id="password" class="input-class" name="password">
+                    <label for="register-password" class="label-class">Password</label>
+                    <input type="password" id="register-password" class="input-class" name="register-password">
                 </div>
 
                 <div>
-                    <label for="confirm-password" class="label-class">Confirm Password</label>
-                    <input type="password" id="confirm-password" class="input-class" name="confirm-password">
+                    <label for="register-confirm-password" class="label-class">Confirm Password</label>
+                    <input type="password" id="register-confirm-password" class="input-class" name="register-confirm-password">
                 </div>
 
                 <div id="div-checkbox">
-                    <input name="checkbox" value="0" type="hidden">
-                    <input type="checkbox" style="margin: 0px;" id="checkbox" name="checkbox" value="0">
-                    <label for="checkbox">Resta collegato</label>
+                    <input name="register-checkbox" value="0" type="hidden">
+                    <input type="checkbox" style="margin: 0px;" id="register-checkbox" name="register-checkbox" value="0">
+                    <label for="register-checkbox">Resta collegato</label>
                 </div>
 
                 <div>
-                    <input type="submit" id="submit" class="input-class" name="submit" value="Invia">
+                    <input type="submit" id="register-submit" class="input-class" name="register-submit" value="Invia">
                 </div>
             </form>
         </div>
+
 
         <script type="text/javascript" src="register.js"></script>
     </body>

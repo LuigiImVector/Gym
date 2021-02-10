@@ -1,15 +1,27 @@
 <?php
-if(isset($_POST['submit']))
+
+$error = "";
+
+$db = mysqli_connect("localhost", "root", "", "gymDatabase");
+
+if(mysqli_connect_error())
+{
+    die("Si è verificato un errore, riprovare più tardi.");
+}
+
+include("register.html");
+
+if(isset($_POST['register-submit']))
 {   
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $confirmPassword = $_POST['confirm-password'];
-    $checkbox = $_POST['checkbox'];
+    $email = $_POST['register-email'];
+    $password = $_POST['register-password'];
+    $confirmPassword = $_POST['register-confirm-password'];
+    $checkbox = $_POST['register-checkbox'];
   
 /* Analisi dati ricevuti */
-    if (!$_POST['email'])
+    if ($email == "")
     {
-        $error .= "Inserire una EMail.</br>";
+        $error .= "Inserire una Email.</br>";
     }
 
     if ($password == "")
@@ -78,11 +90,18 @@ if(isset($_POST['submit']))
         if ($checkbox == "1")
         {
             setCookie("gymCookie", "", time() + 60*60*24*30, "/", "", "TRUE", "TRUE");  /* L'ID serve? */
+        } else {
+            //Inserire la sessione
         }
+
+
+
+
     } else if ($error != "")
     {
         $error = '<div id="error-message">' . $error . '</div>';
     }
 }
+
 
 ?>
