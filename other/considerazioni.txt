@@ -10,12 +10,12 @@ T o D o
 [LOGIN PAGE]
 
 Ora:
-    +Controllare i codici (Html, Css e Php);
-    +Ricreare la tabella nel DataBase;
-    +Rifare la pagina con tag nuovi;
-    +Margine automatico per il checkbox;
-    +Aggiustare label nel checkbox;
-    +Scrivere nuove tasks.
+    	+Controllare i codici (Html, Css e Php);
+   	+Ricreare la tabella nel DataBase;
+   	+Rifare la pagina con tag nuovi;
+   	+Margine automatico per il checkbox;
+    	+Aggiustare label nel checkbox;
+   	+Scrivere nuove tasks.
 
 Dopo:
     ///
@@ -29,48 +29,46 @@ Forse:
 [REGISTER PAGE]
 
 Ora:
-    +Controllare i codici (Html, Css e Php);
-    +Ricreare la tabella nel DataBase;
-    +Rifare la pagina con tag nuovi;
-    +Margine automatico per il checkbox;
-    +Aggiustare label nel checkbox;
-    +Scrivere nuove tasks;
-    +Confirm email;
-    +Confirm email e confirm password compariranno solamente quando verrà inserita (correttamente) la mail/password.
+    	+Scrivere nuove tasks;
 
 Dopo:
     ///
     
 
 Forse:
-    ///
-    
+	+Confirm password comparirà solamente quando verrà inserita (correttamente) la mail/password.
+	+Per la validazione della password fare un solo if e scrivere 'La password non rispetta i criteri prestabiliti' e mettendo
+	il mouse su'criteri prestabiliti' mostrerà i criteri con un tooltip:
+		https://archive.joomshaper.com/forums/tooltip-from-regular-labs-with-pagebuilder
+		https://www.w3schools.com/css/css_tooltip.asp
 
 
 [TIMER PAGE]
 
 Ora:
-    +[SE NON C'È GIÀ] Far lasciare lo schermo attivo nel telefono quando c'è il timer attivo OPPURE metterlo in background (non devo per forza vedere quanti secondi mancano, basta che si sentano i rumori al momento giusto).
+    	+[SE NON C'È GIÀ] Far lasciare lo schermo attivo nel telefono quando c'è il timer attivo OPPURE metterlo in background (non devo per forza vedere quanti secondi mancano, basta che si sentano i rumori al momento giusto).
 
 Dopo:
-    +Aggiungere un tasto 'Pausa' nel timer.
+    	+Aggiungere un tasto 'Pausa' nel timer.
+	+Aggiustare checkbox
 
 
 Forse:
-    +In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4);
-    +In 'Repeat' mettere un limite di ripetizioni pari a ****;
-    +In base al tempo mancante lo sfondo cambia - Sarebbe bello che il colore dello sfondo-Lavoro cambiasse fino a diventare quello dello sfondo-Riposo (Magari per evitare che la persona si confonda si può fare che lo sfondo di quando manca 1 secondo alla fine del timer-Lavoro sia simile ma non uguale allo sfondo-Riposo);
-    +Pulsante-testo 'Funzioni aggiuntive'//'Altro' [Dopo la versione 1.0 - Forse] || Esercizio 1 questo tempo, Esercizio 2 quest'altro ...;
-    +Il valore della pausa può essere 0.
+    	+In 'Pausa e Lavoro' mettere un limite di secondi pari a 5 (O forse 4);
+    	+In 'Repeat' mettere un limite di ripetizioni pari a ****;
+    	+In base al tempo mancante lo sfondo cambia - Sarebbe bello che il colore dello sfondo-Lavoro cambiasse fino a diventare quello dello sfondo-Riposo (Magari per evitare che la persona si confonda si può fare che lo sfondo di quando manca 1 secondo alla fine del timer-Lavoro sia simile ma non uguale allo sfondo-Riposo);
+    	+Pulsante-testo 'Funzioni aggiuntive'//'Altro' [Dopo la versione 1.0 - Forse] || Esercizio 1 questo tempo, Esercizio 2 quest'altro ...;
+    	+Il valore della pausa può essere 0.
 
     
 
 [OTHER]
 
-    +Sistemare il chechbox;
-    +Cambiare metodo per registrarsi/entrare, quello attuale fa pena, si confonde con il timer;
-    +Autenticandosi si verrà portati in una pagina in cui sarà possibile scrivere qualsiasi cosa si voglia;
-    +Creare pannello di controllo per l'account (magari anche un'immagine profilo).
+    	+Classi globali (input-class // label-class)
+    	+Sistemare il chechbox;
+    	+Cambiare metodo per registrarsi/entrare, quello attuale fa pena, si confonde con il timer;
+    	+Autenticandosi si verrà portati in una pagina in cui sarà possibile scrivere qualsiasi cosa si voglia;
+    	+Creare pannello di controllo per l'account (magari anche un'immagine profilo).
 
 
     
